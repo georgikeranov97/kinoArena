@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LionKing</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+
+
+    <style>
+        /* #wrapper{
+        width: 100%;
+        border:2px solid blue;
+    } */
+        body{
+            font-family: Arial, Helvetica, sans-serif;  
+            
+        }
+        #blank {
+            height: 50vh;
+        }
+
+        #afish {
+            width: 300px;
+            border: 2px solid red;
+            position: absolute;
+            top: 192px;
+            left: 196px;
+        }
+
+        #trailer {
+            border: 2px solid green;
+            position: absolute;
+            top: 0px;
+            left: 2px;
+            height: 30%;
+            width: 290px;
+            overflow: hidden;
+            background-color: rgba(138,43,226,0.8);
+            z-index: 5;
+        }
+
+        #podrobno {
+            border: 2px solid yellow;
+            position: absolute;
+            top: 98px;
+            left: 2px;
+            height: 30%;
+            width: 290px;
+            overflow: hidden;
+            background-color: rgba(138,43,226,0.6);;
+        }
+
+        #liubimi {
+            border: 2px solid blue;
+            position: absolute;
+            top: 196px;
+            left: 2px;
+            height: 30%;
+            width: 290px;
+            overflow: hidden;
+            background-color: rgba(138,43,226,0.4);
+        }
+
+        #trailer,
+        #podrobno,
+        #liubimi {
+            visibility: hidden;
+        }
+
+        #afish:hover #trailer {
+            visibility: visible;
+        }
+
+        #afish:hover #podrobno {
+            visibility: visible;
+        }
+
+        #afish:hover #liubimi {
+            visibility: visible;
+        }
+        
+        a>span{
+            color: #fff;
+            font-weight: 600;
+        }
+        #trailer > a, #podrobno>a, #liubimi>a{
+            text-decoration: none;
+            padding-top:10px;
+            padding-left: 10px;
+        }
+        /* #afish>img{
+            width: 295px;
+        } */
+        /* #afish:hover{
+            border-top: 1px solid rgba(38,38,38,0.5);
+        } */
+
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id='blank'></div>
+    </div>
+    <div id='afish'>
+        <div id='trailer'>
+            <a href="#">
+                <span><i class="fas fa-play-circle"></i></span>
+                <span>ТРЕЙЛЪР</span>
+            </a>
+        </div>
+        <div id='podrobno'>
+            <a href="#">
+                <span><i class="fas fa-star"></i></span>
+                <span>ПОДРОБНО</span>
+            </a>
+        </div>
+        <div id='liubimi'>
+            <a href="#">
+                <span><i class="fas fa-heart"></i></span>
+                <span>ДОБАВИ В ЛЮБИМИ</span>
+            </a>
+        </div>
+        <img width="200px" src='assets/images/lionKing.jpg'>
+
+    </div>
+    </div>
+    <script>
+        // var moveBoxes= function moveBoxes(obj,objStop){
+        //     // console.log('raboti')
+        //     var direction='down'
+        //     var mop=-98
+        //     var id = setInterval(stepByStep,5)
+        //         function stepByStep(){ 
+
+        //             if (direction==='down'){
+        //                 mop++;
+        //             }
+        //             if( direction==='up'){
+        //                 if(mop==objStop){
+        //                     clearInterval(id)
+        //                 } 
+        //                 mop--
+        //             }
+        //             if(mop == (objStop +60)){
+        //                 direction = 'up'                    
+        //             }
+        //             obj.style.top= mop+'px';
+        //         }
+        //    }
+        //    var removeBoxes= function removeBoxes(obj,objStop){
+        //     // console.log('raboti')
+        //     var mop=-98
+        //     var id = setInterval(reStepByStep,2)
+        //         function reStepByStep(){
+
+        //             obj.style.top= objStop+'px';
+        //                 objStop--;
+        //             if(mop == objStop){
+        //                 clearInterval(id)                    
+        //             }
+        //         }
+        //    }
+        // var trailer=document.getElementById('trailer');
+        // var podrobno=document.querySelector('#podrobno');
+        // var liubimi=document.querySelector('#liubimi');
+        // var trailerStop = 0;
+        // var podrobnoStop = 98;
+        // var liubimiStop=196;
+        // document.getElementById('afish').addEventListener('mouseover',moveBoxes.bind(window,trailer,trailerStop) ,false)
+        // document.getElementById('afish').addEventListener('mouseover',moveBoxes.bind(window,podrobno,podrobnoStop) ,false)
+        // document.getElementById('afish').addEventListener('mouseover',moveBoxes.bind(window,liubimi,liubimiStop) ,false)
+        // document.getElementById('afish').addEventListener('mouseout',removeBoxes.bind(window,trailer,trailerStop) ,false)
+        // document.getElementById('afish').addEventListener('mouseout',removeBoxes.bind(window,podrobno,podrobnoStop) ,false)
+        // document.getElementById('afish').addEventListener('mouseout',removeBoxes.bind(window,liubimi,liubimiStop) ,false)
+    </script>
+
+</body>
+
+</html>
