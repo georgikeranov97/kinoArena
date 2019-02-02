@@ -1,0 +1,44 @@
+.fly{
+    width: 60px;
+    position: fixed;
+}
+#popcorn1 {
+    width: 60px;
+    top: 81px;
+    left: 48px;
+    filter: blur(1px);
+    transform: rotate(81deg);
+    z-index: -1;
+}
+#popcorn2 {
+    top: 300px;
+    left: 100px;
+    width: 58px;
+    filter: blur(0px);
+    transform: rotate(300deg);
+    z-index: -1;
+}
+#popcorn3{
+    top: 392px;
+    left: 24px;
+    width: 40px;
+    filter: blur(0.5px);
+    transform: rotate(392deg);
+    z-index: -1;
+}
+#popcorn4{
+    top: 464px;
+    left: 77px;
+    width: 25px;
+    filter: blur(0.2px);
+    transform: rotate(-464deg);
+    z-index: -1;
+}
+#nacho1 {    
+    top: 208px;
+    left: 33px;
+    width: 58px;
+    filter: blur(0.2px);
+    transform: rotate(208deg);
+    z-index: -1;
+}
