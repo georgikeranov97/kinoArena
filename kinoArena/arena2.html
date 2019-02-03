@@ -94,40 +94,56 @@
 .InnerAfish > a:hover{
 opacity: 1;
 }
+.InnerAfish>a {
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+        }
 
+        body * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .InnerAfish>a>span {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 15px 7px;
+        }
 
 
     </style>
 </head>
 <body>
-        <div id="wrapper">
-                <div id='afish' >
-                    <div class='InnerAfish'>
-                    <a href="#" id='trailer'>
-                        <span><i class="fab fa-gratipay"></i><p>ДОБАВИ В ЛЮБИМИ</p></span>
-                    </a>
-                    <a href="#"  id='podrobno'></a>
-                    <a href="#"  id='liubimi'></a>
-                    
-                    <img  src='lionKing.jpg'>
-                </div>
-                    <h3>ZAGLAVIE NA FILMA</h3>
-                    <div class="infoZaFilma">
-                        <div class="stars">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    <div class="LanguageAge"><img src="withBGLanguage.png" alt=""></div>
-                    <div class="LanguageAge"><img src="bezOgranicheniqVyzrast.png" alt=""></div>
-                </div>
-                </div>
-                    
+    <div id="wrapper">
+        <div id='afish'>
+            <div class='InnerAfish'>
+                <a href="#" id='trailer'>
+                    <span><i class="fas fa-play-circle"></i>
+                        <p>ТРЕЙЛЪР</p>
+                    </span>
+                </a>
+                <a href="#" id='podrobno'>
+                    <span><i class="fas fa-star"></i>
+                        <p>ПОДРОБНО</p>
+                    </span>
+                </a>
+                <a href="#" id='liubimi'>
+                    <span><i class="fas fa-heart"></i>
+                        <p>ДОБАВИ В ЛЮБИМИ</p>
+                    </span>
+                </a>
+                <div id="snimka">
 
                 </div>
             </div>
+            <div id="movieTitle">
+
+            </div>
+        </div>
+        <input id="movie" type="text" />
+        <button id="show">Pokaji</button>
+    </div>
         <script>
     
             var trailer=document.getElementById('trailer');
@@ -227,6 +243,6 @@ opacity: 1;
         //     afish.style.backgroundColor = ''
         // },false)
     </script>
-        
+    <script src="scripts/movies.js"></script>
 </body>
 </html>
