@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LionKing</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+ 
+    #afish {
+    width: 250px;
+    border: 2px solid red;
+    position: relative;
+    top: 192px;
+    left: 196px;
+    padding: 20px 20px 0px 20px;
+    box-sizing: border-box;
+  
+    }
+    /* @keyframes changeColor {
+    from {background-color: '';}
+    to {background-color: grey;}
+    } */
+    #afish:hover{
+        background-color: grey
+    }
+    #afish:not(:hover){
+        background-color:'';
+    }
+    /* #trailer #podrobno #liubimi{
+    position: absolute;
+    margin:0 auto;
+    } */
+    #trailer {
+    /* border: 2px solid green; */
+    position: absolute;
+    top: -100px;
+    top: -99px;
+    width: 100%;
+    height: 33%;;
+    overflow: hidden;
+    background-color: blueviolet;
+    opacity: 0.8;
+   
+}
+    #podrobno {
+    /* border: 2px solid yellow; */
+    position: absolute;
+    width: 100%;
+    top: -100px;
+    height: 33%;
+    overflow: hidden;
+    background-color: blueviolet;
+    opacity: 0.6;
+    z-index: 2
+}
+#liubimi {
+    /* border: 2px solid blue; */
+    position: absolute;
+    width: 100%;
+    top: -100px;
+    height: 33%;
+    overflow: hidden;
+    background-color: blueviolet;
+    opacity: 0.4;
+    z-index: 2
+}
+.checked {
+  color: orange;
+}
+.infoZaFilma{
+    display: flex;
+}
+.stars{
+    flex:4;
+}
+.LanguageAge{
+    flex:1
+}
+.InnerAfish{
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+}
+.InnerAfish>img{
+    /* display: block; */
+    /* margin: 0 auto; */
+    /* padding: 20px; */
+    width: 100%;
+}
+.InnerAfish > a:hover{
+opacity: 1;
+}
+
+
+
+    </style>
+</head>
+<body>
+        <div id="wrapper">
+                <div id='afish' >
+                    <div class='InnerAfish'>
+                    <a href="#" id='trailer'>
+                        <span><i class="fab fa-gratipay"></i><p>ДОБАВИ В ЛЮБИМИ</p></span>
+                    </a>
+                    <a href="#"  id='podrobno'></a>
+                    <a href="#"  id='liubimi'></a>
+                    
+                    <img  src='lionKing.jpg'>
+                </div>
+                    <h3>ZAGLAVIE NA FILMA</h3>
+                    <div class="infoZaFilma">
+                        <div class="stars">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    <div class="LanguageAge"><img src="withBGLanguage.png" alt=""></div>
+                    <div class="LanguageAge"><img src="bezOgranicheniqVyzrast.png" alt=""></div>
+                </div>
+                </div>
+                    
+
+                </div>
+            </div>
+        <script>
+    
+            var trailer=document.getElementById('trailer');
+        
+            var podrobno=document.querySelector('#podrobno');
+            
+            var liubimi=document.querySelector('#liubimi');
+          
+            let afish = document.getElementById('afish');
+
+            // na kakvi stojnosti da sprat kontainerite
+            // 0; 98; 196
+            var trailerStop = 0;
+            var podrobnoStop = 100;
+            var liubimiStop=200;
+            var imaLi = false; // false - pokazva, che nqma zadejstvana animaciq 
+            var flag=true; // ako se zadeistva funkciqta za pribirane, predi da sa izlezli do krai - da se pribirat
+     
+        var moveBoxes= function moveBoxes(){
+            // ako ima animaciq da ne se zadejstva
+            if(imaLi===true){return}
+            // kato se zadejstva animaciqta stava true, za da ne startira otnovo
+            imaLi=true;
+            moveOneByOne(trailer,trailerStop);
+            moveOneByOne(podrobno,podrobnoStop);
+            moveOneByOne(liubimi,liubimiStop)
+        
+        function moveOneByOne(obj,objStop){ 
+            var direction='down'
+            var mop=-100;
+         
+            var id = setInterval(stepByStep,1)
+                function stepByStep(){ 
+                    if(flag === false){
+                        imaLi=false;
+                        clearInterval(id);
+                        return;
+                    }
+                    if (direction==='down'){
+                        mop++;
+                    }
+                    if( direction==='up'){
+                        if(mop==objStop){
+                             clearInterval(id) 
+                             return;
+                        } 
+                        mop--
+                    }
+                    if(mop == (objStop +60)){
+                        direction = 'up'                    
+                    }
+                    obj.style.top= mop+'px';
+                }           
+           }      
+        }
+        
+           var removeBoxes= function removeBoxes(){
+                flag=false; // zadeistvano e pribiraneto na kutiite i trqbva da sprem izkaravaneto
+                reMoveOneByOne(trailer);
+                reMoveOneByOne(podrobno);
+                reMoveOneByOne(liubimi)
+                imaLi = false;
+                // kato prikliuchi otnovo kazva, che e svobodno, za da byde izvikana pak animaciq
+                function reMoveOneByOne(obj){
+                    var mop=-100;
+                    var objStop=parseInt(obj.style.top, 10);
+                    var id = setInterval(reStepByStep,1)
+        
+                    function reStepByStep(){
+                        if(flag===true){
+                            clearInterval(id)  
+                            return; 
+                        }
+                        obj.style.top= objStop+'px';
+                            objStop--;
+                        if(mop == objStop){
+                            clearInterval(id)  
+                            return;                
+                        }
+                    }
+                }
+           }
+
+        if (imaLi===false){
+            afish.addEventListener('mouseover', ()=>{
+                flag=true;
+                moveBoxes();
+            },false)
+        }
+        // afish.addEventListener('mouseover',()=>{
+        //     afish.style.animation-name = 'changeColor';
+        //     afish.style.animation-duration = '4s';
+        // },false)
+        afish.addEventListener('mouseleave', removeBoxes,false)
+        // afish.addEventListener('mouseout',()=>{
+           
+        //     afish.style.backgroundColor = ''
+        // },false)
+    </script>
+        
+</body>
+</html>
