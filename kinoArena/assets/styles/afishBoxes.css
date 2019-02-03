@@ -1,0 +1,101 @@
+#vkaraiTuk{
+    display: flex;
+    flex-wrap: wrap;
+}
+.afish {
+width: 15.625em;
+border: 2px solid red;
+position: relative;
+/* top: 192px;
+left: 196px; */
+padding: 1.25em 1.25em 0px 1.25em;
+box-sizing: border-box;
+
+}
+.afish:hover{
+background-color: darkslategrey;
+/* animation-name: changeColor;
+animation-duration: 1s; */
+}
+/* @keyframes changeColor {
+from {background-color: '';}
+to {background-color: grey;}
+
+} */
+.afish:not(:hover){
+    background-color:'';
+}
+.InnerAfish{
+overflow: hidden;
+position: relative;
+height: 18.75em;
+}
+.InnerAfish>img{
+/* display: block; */
+/* margin: 0 auto; */
+/* padding: 20px; */
+width: 100%;
+}
+.InnerAfish > a:hover{
+opacity: 1;
+}
+.InnerAfish>a {
+color: #fff;
+font-weight: bold;
+text-decoration: none;
+}
+body * {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.InnerAfish>a>span {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+padding: 0.9375em 0.4375em;
+}
+.trailer {
+/* border: 2px solid green; */
+position: absolute;
+top: -6.25em;
+width: 100%;
+height: 33%;;
+overflow: hidden;
+background-color: darkred;
+opacity: 0.9;
+}
+.podrobno {
+/* border: 2px solid yellow; */
+position: absolute;
+width: 100%;
+top: -6.25em;
+height: 33%;
+overflow: hidden;
+background-color: darkred;
+opacity: 0.75;
+z-index: 2
+}
+.liubimi {
+/* border: 2px solid blue; */
+position: absolute;
+width: 100%;
+top: -6.25em;
+height: 33%;
+overflow: hidden;
+background-color: darkred;
+opacity: 0.6;
+z-index: 2
+}
+.checked {
+color: orange;
+}
+.infoZaFilma{
+display: flex;
+}
+.stars{
+flex:4;
+}
+.LanguageAge{
+flex:1
+}
+
