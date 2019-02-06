@@ -1,0 +1,196 @@
+*{
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+}
+.login-register-form{
+    background-color: #111;
+    display: inline-block;
+    padding: 2em 2.5em;
+    width: 32%;
+    border: 10px solid #666;
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+}
+.justLogin{
+    height: 100%;
+}
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-stretch: extra-condensed;
+}
+
+h1 {
+    color: #fff;
+    font-size: 1.7em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logos{
+    display: flex;
+    justify-content: center;
+}
+
+span>i {
+    border: 5px solid #fff;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    font-size: 2.5em;
+    padding-left: 14px;
+    padding-top: 13px;
+    box-sizing: border-box;
+    color: #fff;
+    margin-right: 18px;
+    margin-bottom: 20px;
+}
+
+.fa-facebook-f {
+    padding-left: 20px;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+}
+
+h2 span {
+    padding: 0 10px;
+    background-color: #111;
+    color: #fff;
+}
+.fields{
+    background-color: #555;
+    color: #fff;
+    font-size: 0.8em;
+    padding: 12px;
+    border-radius: 5%;
+    display: block;
+    margin-top: 5px;
+    width: 100%;
+    margin-bottom: 17px;
+}
+.fields:focus{
+    background-color: #888;
+    transition: 0.25s;
+}
+::placeholder{
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+}
+#forgottenPass > span{
+    color: #fff;
+}
+#forgottenPass > a{
+    float: right;
+    color: #fff;
+    text-decoration: none;
+}
+.enterButton > button{
+    background-color: #111;
+    color: #fff;
+    border-radius: 5%;
+    padding: 15px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    font-stretch: condensed;
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.enterButton{
+    display: flex;
+    justify-content: center;
+}
+#newRegister > button{
+    background-color: #111;
+    color: #fff;
+    padding: 10px;
+    font-size: 0.7em;
+    font-weight: bold;
+    font-stretch: condensed;
+    width: 50%;
+    margin-top: 25px;
+}
+#newRegister{
+    display: flex;
+    justify-content: center;
+}
+#newRegister > button:hover{
+    cursor: pointer;
+}
+.enterButton > button:hover{
+    cursor: pointer;
+}
+em{
+    font-style: italic;
+    color: #fff;
+}
+strong{
+    font-weight: bold;
+}
+.inputs>p{
+    text-align: center;
+}
+em> span{
+    color: rgb(185, 9, 9);
+    padding-right: 2px;
+}
+#required{
+    margin-top: 15px;
+}
+.justRegister{
+    width: 60%;
+    overflow: auto;
+    display: none;
+}
+#flexRegister{
+    display: flex;
+    flex-direction: row;
+}
+.checkbox{
+    display: flex;
+    justify-content: flex-start;
+    color: #888;
+    margin-bottom: 5px;
+}
+span>a{
+    color: rgb(185, 9, 9);
+}
+.registerButton > button{
+    width: 80%;
+    background-color: #111;
+    padding: 15px;
+    border-radius: 2%;
+    color: #888;
+    margin-top: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.registerButton{
+    display: flex;
+    justify-content: center;
+}
+#formImages{
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-top: 65px;
+}
+.error{
+    color: rgb(185, 9, 9);
+}
+/* span > i:hover{
+    width: 85px;
+    height: 85px;
+    transition: 0.25s;
+} */
