@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/mainStyle2.css">
+    <link rel="stylesheet" href="assets/styles/filterNav.css">
     <link rel="stylesheet" href="assets/styles/afishBoxes.css">
     <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
@@ -22,7 +24,7 @@
     <style>
         #wrapper{
         border:2px solid whitesmoke;
-        width: 1100px;
+        width: 1000px;
         margin: 0 auto;
 
        }
@@ -321,10 +323,46 @@
     <!-- </div> -->
     <div id="wrapper">
         <main>
-            <div id='vkaraiTuk'>
+           
 
-
+            <div class='filterNav'>
+                <div class='arrow' id='oneArrow' tabindex="0"><img src="assets/images/red_arrow.png" alt=""></div>   
+                <div class="tablica">
+                <table id="tableNav">
+                <tr class="trBorderBottom">
+                    <th class="filter pointer" id="firstMarked"><p>ДЕТСКИ ФИЛМИ</p></th>
+                    <th class="filter pointer "> 
+                        <img class="defaultImg" src="assets/images/imax.png" alt="imax">
+                        <img class='hoverImg' src="assets/images/imax-hover.png" alt="imax-hover">
+                    </th>
+                    <th class="filter pointer">  
+                        <img src="assets/images/premium.png" alt="premium" class="defaultImg">
+                        <img src="assets/images/premium-hover.png" alt="premium-hover" class="hoverImg">
+                    </th>
+                    <th class="filter pointer"> 
+                        <img src="assets/images/luxe.png" alt="luxe" class="defaultImg">
+                        <img src="assets/images/luxe-hover.png" alt="luxe-hover" class="hoverImg">
+                    </th>
+                    <th class="filter pointer">  
+                        <img src="assets/images/vip.png" alt="vip" class="defaultImg">
+                        <img src="assets/images/vip-hover.png" alt="vip-hover" class="hoverImg">
+                    </th>
+                    <th class="filter pointer"> <p>ОЧАКВАЙТЕ СКОРО</p></th>
+                    <th class="filter pointer"> <p>КОНЦЕРТИ И СЪБИТИЯ</p></th>
+                </tr>
+                </table>
             </div>
+                <div class='arrow' id='twoArrow' tabindex="0"><img src="assets/images/red_arrow.png" alt=""></div>
+            </div>
+
+
+            <div id="allMovies">
+                <div id='vkaraiTuk'></div>
+        
+            
+                <div id='vkaraiTuk2'></div>
+            </div>
+
             <div class='advertising'>
                 <div class="advRollers">
                     <div id='reklamenPanel1'>
@@ -504,7 +542,7 @@
                     </p>
                     <p>
                         <img src="assets/images/stenik-logo.png" alt="stenik-logo">
-                        Уеб дизайн от Stenik
+                        Уеб дизайн от Георги и Мирена
                     </p>
                 </div>
             </div>
@@ -532,5 +570,9 @@
 
 </body>
 <script src="scripts/flyingPopcorns.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="scripts/flyingPopcorns.js"></script>
+<script src="scripts/afishBoxes.js"></script>
+<script src="scripts/filterNav.js"></script>
 
 </html>

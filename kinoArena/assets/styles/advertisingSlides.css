@@ -3,15 +3,15 @@
     position: relative;
     /* border: 2px solid blue; */
     width: 100%;
-    left: 0px;
+    left: 0em;
     box-sizing: border-box
 }
 #reklamenPanel1, #reklamenPanel2, #reklamenPanel3{
-    width: 358px;
+    width: 22.375em;
 /* border: 2px solid red; */
 overflow: hidden;
 box-sizing: border-box;
-margin: 37px 0;
+margin: 2.3125em 0;
 }
 #reklamenPanel1 input{
     margin:0 4px;
@@ -23,18 +23,18 @@ margin: 37px 0;
     color:whitesmoke;
 }
 .innerPanel h4 h5 {
-    margin: 10px 0;
+    margin: 0.625em 0;
 }
 .innerPanel footer{
-    margin-top: 20px;
-    font-size: 12px;
+    margin-top: 1.25em;
+    font-size: 0.75em;
 }
 .roller img {
-    height: 100px; 
+    height: 6.25em; 
 }
 .izbori {
     position: relative;
-    top: 4px;
-    left: 280px;
+    top: 0.25em;
+    left: 17.5em;
     z-index: 5;
 }

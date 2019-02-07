@@ -25,7 +25,7 @@ var reklamenPanel3=document.querySelector('#reklamenPanel3')
     var reklami3 = document.querySelectorAll('#reklamenPanel3 div')
     var reklama7 = reklami3[2]
     var reklama8 = reklami3[5]
-
+    var step = 0.125;
     function checkIfImaLiStop(){
         if(imaLi===true){
             imaLi=false;
@@ -95,11 +95,11 @@ var id;
         }
         //ako e izbran pyrviq buton poziciqta na 1 slaid trqbva da e -358
         if (radio2.checked){
-            left1Poziciq=-358
+            left1Poziciq=-22.375
         }
         //ako e izbran tretiq buton, 1 slaid trqbva da se premesti do -716
         if (radio3.checked){
-            left1Poziciq=-716
+            left1Poziciq=-44.75
         }
         //ako poziciqta v momenta syvpada s izbraniq buton da ne pravi nishto
         if(left1Poziciq == left1 ){
@@ -113,10 +113,10 @@ var id;
             id=setInterval(StepByStepPlus);
         }
         function StepByStepMinus(){
-            left1--;
-            reklama1.style.left = left1 + 'px'
-            reklama2.style.left = left1 + 'px'
-            reklama3.style.left = left1 + 'px'
+            left1-=step;
+            reklama1.style.left = left1 + 'em'
+            reklama2.style.left = left1 + 'em'
+            reklama3.style.left = left1 + 'em'
             if(left1<=left1Poziciq ){    
                 clearInterval(id);
                 imaLi=false;
@@ -124,10 +124,10 @@ var id;
             }  
         }
         function StepByStepPlus(){
-            left1++;
-            reklama1.style.left = left1 + 'px'
-            reklama2.style.left = left1 + 'px'
-            reklama3.style.left = left1 + 'px'
+            left1+=step;
+            reklama1.style.left = left1 + 'em'
+            reklama2.style.left = left1 + 'em'
+            reklama3.style.left = left1 + 'em'
             
             if(left1>=left1Poziciq){    
                 clearInterval(id)
@@ -149,10 +149,10 @@ var id;
             left1Poziciq=0;
         }
         if (radio5.checked){
-            left1Poziciq=-358
+            left1Poziciq=-22.375
         }
         if (radio6.checked){
-            left1Poziciq=-716
+            left1Poziciq=-44.75
         }
         if(left1Poziciq == left2 ){
                 return
@@ -164,10 +164,10 @@ var id;
             id=setInterval(StepByStepPlus2);
         }
         function StepByStepMinus2(){
-            left2--;
-            reklama4.style.left = left2 + 'px'
-            reklama5.style.left = left2 + 'px'
-            reklama6.style.left = left2 + 'px'
+            left2-=step;
+            reklama4.style.left = left2 + 'em'
+            reklama5.style.left = left2 + 'em'
+            reklama6.style.left = left2 + 'em'
             if(left2<=left1Poziciq ){   
                 clearInterval(id);
                 imaLi=false; 
@@ -175,11 +175,11 @@ var id;
             }    
         }
         function StepByStepPlus2(){
-            left2++;
+            left2+=step;
 
-            reklama4.style.left = left2 + 'px'
-            reklama5.style.left = left2 + 'px'
-            reklama6.style.left = left2 + 'px'
+            reklama4.style.left = left2 + 'em'
+            reklama5.style.left = left2 + 'em'
+            reklama6.style.left = left2 + 'em'
             if(left2>=left1Poziciq){    
                 clearInterval(id)
                 imaLi=false;
@@ -201,7 +201,7 @@ var id;
             left1Poziciq=0;
         }
         if (radio8.checked){
-            left1Poziciq=-358
+            left1Poziciq=-22.375
         }
         if(left1Poziciq == left3 ){
                 return
@@ -213,9 +213,9 @@ var id;
             id=setInterval(StepByStepPlus3);
         }
         function StepByStepMinus3(){
-            left3--;
-            reklama7.style.left = left3 + 'px'
-            reklama8.style.left = left3 + 'px'
+            left3-=step;
+            reklama7.style.left = left3 + 'em'
+            reklama8.style.left = left3 + 'em'
             if(left3<=left1Poziciq ){
                 imaLi=false;    
                 clearInterval(id);
@@ -223,10 +223,10 @@ var id;
             }    
         }
         function StepByStepPlus3(){
-            left3++;
+            left3+=step;
 
-            reklama7.style.left = left3 + 'px'
-            reklama8.style.left = left3 + 'px'
+            reklama7.style.left = left3 + 'em'
+            reklama8.style.left = left3 + 'em'
             if(left3>=left1Poziciq){    
                 clearInterval(id)
                 imaLi=false; 

@@ -4,13 +4,23 @@
 }
 .afish {
 width: 15.625em;
-border: 2px solid red;
+/* border: 2px solid red; */
 position: relative;
 /* top: 192px;
 left: 196px; */
 padding: 1.25em 1.25em 0px 1.25em;
 box-sizing: border-box;
+color:white;
 
+
+}
+.afish h3{
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    width: 7em; 
+    height: 1.32em; 
+    text-align: center;
+ 
 }
 .afish:hover{
 background-color: darkslategrey;
@@ -99,3 +109,113 @@ flex:4;
 flex:1
 }
 
+
+/* Za vtorite malki kutiiki  */
+.cutText2 h5 { 
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    width: 4.8em; 
+    height: 1.32em; 
+    white-space: nowrap;
+    color:white;
+  }
+#vkaraiTuk2{
+    display: flex;
+    flex-wrap: wrap;
+}
+.afish2 {
+width: 9.375em;
+/* border: 1px solid red; */
+position: relative;
+/* top: 192px;
+left: 196px; */
+padding: 0.75em 0.75em 0px 0.75em;
+box-sizing: border-box;
+
+}
+.afish2:hover{
+background-color: darkslategrey;
+/* animation-name: changeColor;
+animation-duration: 1s; */
+}
+/* @keyframes changeColor {
+from {background-color: '';}
+to {background-color: grey;}
+
+} */
+.afish2:not(:hover){
+    background-color:'';
+}
+.InnerAfish2{
+overflow: hidden;
+position: relative;
+height: 11.25em;
+}
+.InnerAfish2>img{
+/* display: block; */
+/* margin: 0 auto; */
+/* padding: 20px; */
+width: 100%;
+}
+.InnerAfish2 > a:hover{
+opacity: 1;
+}
+.InnerAfish2>a {
+color: #fff;
+font-weight: bold;
+text-decoration: none;
+}
+/* body * {
+font-family: Arial, Helvetica, sans-serif;
+} */
+
+.InnerAfish2>a>span {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+padding: 0.5625em 0.2625em;
+}
+.trailer2 {
+/* border: 2px solid green; */
+position: absolute;
+top: -3.75em;
+width: 100%;
+height: 33%;;
+overflow: hidden;
+background-color: darkred;
+opacity: 0.9;
+}
+.podrobno2 {
+/* border: 2px solid yellow; */
+position: absolute;
+width: 100%;
+top: -3.75em;
+height: 33%;
+overflow: hidden;
+background-color: darkred;
+opacity: 0.75;
+z-index: 2
+}
+.liubimi2 {
+/* border: 2px solid blue; */
+position: absolute;
+width: 100%;
+top: -3.75em;
+height: 33%;
+overflow: hidden;
+background-color: darkred;
+opacity: 0.6;
+z-index: 2
+}
+.checked2 {
+color: orange;
+}
+.infoZaFilma2{
+display: flex;
+}
+.stars2{
+flex:4;
+}
+.LanguageAge2{
+flex:1
+}
