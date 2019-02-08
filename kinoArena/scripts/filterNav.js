@@ -1,6 +1,5 @@
 
 var vsichki = document.querySelectorAll('.filter');
-console.log(vsichki)
 Array.prototype.forEach.call(vsichki, vsqko =>{
     
     vsqko.addEventListener('click',function(){
@@ -9,7 +8,6 @@ Array.prototype.forEach.call(vsichki, vsqko =>{
         $('tr').children('th').css('border-bottom','none')
         $(this).css('border-bottom','5px solid red')
         $(this).children('p').css('color','red')
-        apperarKidsMovies();
     },false)
 })
 
@@ -55,4 +53,29 @@ strelka2.addEventListener('click',function(){
     }
 })
 
+vsichki[0].addEventListener('click',()=>{
+
+    $('.checkedMovies').fadeOut().css('display','none')
+    $('#allMovies').fadeIn().css('display','flex')
+})
+vsichki[1].addEventListener('click',()=>{
+    $('.checkedMovies').fadeOut().css('display','none');
+    $('#forKids').fadeIn().css('display','flex')
+})
+vsichki[2].addEventListener('click',()=>{
+    $('.checkedMovies').fadeOut().css('display','none');
+    $('#imax').fadeIn().css('display','flex')
+})
+vsichki[3].addEventListener('click',()=>{
+    $('.checkedMovies').fadeOut().css('display','none');
+    $('#premium').fadeIn().css('display','flex')
+}) 
+vsichki[4].addEventListener('click',()=>{
+    $('.checkedMovies').fadeOut().css('display','none');
+    $('#luxe').fadeIn().css('display','flex')
+}) 
+vsichki[5].addEventListener('click',()=>{
+    $('.checkedMovies').fadeOut().css('display','none');
+    $('#vip').fadeIn().css('display','flex')
+}) 
 

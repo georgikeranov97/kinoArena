@@ -32,7 +32,7 @@ var count=0;
 window.addEventListener('scroll',()=>{
     if(imaLi){return}
     imaLi=true;
-    let num=window.pageYOffset
+    let num=window.pageYOffset;
     if (num>lastNum ){
         id=setInterval(moveDown,30)
         id2=setInterval(moveSkyUp,30)
@@ -42,6 +42,7 @@ window.addEventListener('scroll',()=>{
        id2=setInterval(moveSkyDown,30)
     }
     lastNum=num;
+  
 })
 function moveDown(){
     

@@ -5,7 +5,7 @@ console.log(vkaraiTuk2)
 var vkaraiTuk = $('#vkaraiTuk')[0]
 var id = 0;
 class Afish{
-    constructor(title,poster,bgLanguage,restrictions,trailerLink,moreLink,isForKids){
+    constructor(title,poster,bgLanguage,restrictions,trailerLink,moreLink,isForKids,isImax, isPremium, isLuxe,isVip){
         this.title = title;
         this.poster = poster;
         this.bgLanguage = bgLanguage;
@@ -16,7 +16,10 @@ class Afish{
         // this.imaLi = false; 
         // this.daIzlizatLi=true;
         this.isForKids = isForKids;
-        
+        this.isImax=isImax;
+        this.isPremium=isPremium;
+        this.isLuxe=isLuxe;
+        this.isVip=isVip;
     }
     //teglim informaciqta i ot informaciqta, za wseki film - napravi now Afish
     showInDOM(){
@@ -63,9 +66,7 @@ class Afish{
         
     }
     showInDOMSmall(){
-        this.isItBig=false;
-        var div = document.createElement('div')
-        div.innerHTML=`
+       return `
         <div class="afish2">
             <div class="InnerAfish2" id=${this.id}>
                 <a href="${this.trailerLink}" class="trailer2">
@@ -103,24 +104,58 @@ class Afish{
                 <div class="LanguageAge2"><img src="${this.restrictions}" alt=""></div>
             </div>
         </div>`
-        vkaraiTuk2.appendChild(div)
     }
 }
-var lion = new Afish('Car Luv','assets/images/lionKing.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#',"#",true)
-var dragon = new Afish('How to train dragon','assets/images/poster_1.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#','#',false)
-var despicable = new Afish('Despicable me 3','assets/images/poster_2.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#','#',true)
-var beauty = new Afish('Beauty and the Beast','assets/images/poster_3.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#','#',false)
-var queen =new Afish('БОХЕМСКА РАПСОДИЯ','assets/images/queen.jpg','assets/images/bezOgranichenq.png','','#','#',false)
+var lion = new Afish('Car Luv','assets/images/lionKing.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#',"#",true,true,false,false,true)
+var dragon = new Afish('How to train dragon','assets/images/poster_1.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#','#',false,true,true,true,false)
+var despicable = new Afish('Despicable me 3','assets/images/poster_2.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#','#',true,false,true,true,true)
+var beauty = new Afish('Beauty and the Beast','assets/images/poster_3.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#','#',false,true,true,false,false)
+var queen =new Afish('БОХЕМСКА РАПСОДИЯ','assets/images/queen.jpg','assets/images/bezOgranichenq.png','','#','#',false,true,true,false,false)
 var allMovies = [lion,dragon,despicable,beauty,queen]
+
+
+var forKidsDiv=document.getElementById('forKids')
+var forKidsarr=allMovies.filter(m=>m.isForKids===true);
+forKidsarr.forEach(m=>{
+    const div = document.createElement('div')
+    div.innerHTML = m.showInDOM()
+    forKidsDiv.appendChild(div)
+})
+var luxeDiv=document.getElementById('luxe');
+var luxeArr = allMovies.filter(m=>m.isLuxe===true);
+luxeArr.forEach(m=>{
+    const div = document.createElement('div')
+    div.innerHTML = m.showInDOM()
+    luxeDiv.appendChild(div)
+})
+var allMoviesInMain = document.getElementById('allMovies');
 allMovies.forEach(movie=>{
     var div = document.createElement('div')
-    console.log(movie.title)
     div.innerHTML=  movie.showInDOM()
+    allMoviesInMain.appendChild(div)
+})
+var imaxMoviesDiv = document.getElementById('imax');
+var imaxMovies=allMovies.filter(m=>m.isImax===true);
+imaxMovies.forEach(m=>{
+    var div = document.createElement('div')
+    div.innerHTML=  m.showInDOM()
+    imaxMoviesDiv.appendChild(div)
+})
+var premiumMoviesDiv = document.getElementById('premium');
+var premiumMovies = allMovies.filter(m=>m.isPremium===true);
+premiumMovies.forEach(m=>{
+    var div = document.createElement('div')
+    div.innerHTML=  m.showInDOM();
+    premiumMoviesDiv.appendChild(div)
+})
+var vipMoviesDiv = document.getElementById('vip');
+var vipMovies = allMovies.filter(m=>m.isVip===true);
+vipMovies.forEach(m=>{
+    var div = document.createElement('div')
+    div.innerHTML=  m.showInDOM();
+    vipMoviesDiv.appendChild(div)
+})
 
-vkaraiTuk.appendChild(div)
-}
-
-)
 // a.appendTo($('#vkaraiTuk'))
 // allMovies.forEach(film=>{
 //     let divNew=film.showInDOM()

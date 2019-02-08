@@ -1,5 +1,11 @@
-#allMovies{
+.checkedMovies{
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
+    display: none;
+
+}
+#allMovies{
+    display: flex;
+
 }
