@@ -8,11 +8,25 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <style>
     .izbor{
-        
+        display: flex;
+        border:1px solid blue
+    }
+    #zakupuvane{
+        border: 1 px solid green;
+        flex:1;
+        width:10em;
+    }
+    #screenBox{
+        flex:2
+    }
+    #izborNaMesta{
+        position: relative;
+    top: -28em;
+    left: 15em;
     }
     .izbor p {
     margin: 0 auto;
-    width: 10%;
+    width: 100%;
     }
     img{
         position: relative;
@@ -90,178 +104,154 @@
 </head>
 <body>
     <main>
-        <div id='zakupuvane'>
-            <p id='bileti'></p>
-            
-        </div>
+       
         <div class="izbor">
-            <p>ЕКРАН</p>
-            <img src="assets/images/red-line-png-0.png" alt="screen">
-            <div id='izborNaMesta'>
-                <div id='1'> 
-                    <label class="container">
-                        <input type="checkbox"  name="1" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "2" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "3" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                        <label class="container">
-                        <input type="checkbox" name = "4" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "5" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "6" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "7" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "8" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "9" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                        <label class="container">
-                        <input type="checkbox" name = "10" value="1">
-                        <span class="checkmark"></span>
-                    </label>
+            
+            <section id='zakupuvane'>
+                <div >
+                    <p id='bileti'></p>
+                    
                 </div>
-                <div id='2'>
-                    <label class="container">
-                        <input type="checkbox"  name="1" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "2" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "3" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                        <label class="container">
-                        <input type="checkbox" name = "4" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "5" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "6" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "7" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "8" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "9" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                        <label class="container">
-                        <input type="checkbox" name = "10" value="1">
-                        <span class="checkmark"></span>
-                    </label>
+            </section>
+            <section id='screenBox'>
+                <div>
+                    <p>ЕКРАН</p>
+                    <img src="assets/images/red-line-png-0.png" alt="screen">
                 </div>
-                <div id ='3'>
-                    <label class="container">
-                        <input type="checkbox"  name="1" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "2" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "3" value="1">
-                        <span class="checkmark"></span>
-                    </label>
+                <div id='izborNaMesta'>
+                    <div id='1'> <span>1</span>
                         <label class="container">
-                        <input type="checkbox" name = "4" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "5" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "6" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "7" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "8" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "9" value="1">
-                        <span class="checkmark"></span>
-                    </label>
+                            <input type="checkbox"  name="1" value="1">
+                            <span class="checkmark"></span>
+                        </label>
                         <label class="container">
-                        <input type="checkbox" name = "10" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-        </div>   
+                            <input type="checkbox" name = "2" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "3" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                            <label class="container">
+                            <input type="checkbox" name = "4" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "5" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "6" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "7" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "8" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "9" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                            <label class="container">
+                            <input type="checkbox" name = "10" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div id='2'><span>2</span>
+                        <label class="container">
+                            <input type="checkbox"  name="1" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "2" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "3" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                            <label class="container">
+                            <input type="checkbox" name = "4" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "5" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "6" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "7" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "8" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "9" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                            <label class="container">
+                            <input type="checkbox" name = "10" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div id ='3'> <span>1</span>
+                        <label class="container"> 
+                            <input type="checkbox"  name="1" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "2" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "3" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                            <label class="container">
+                            <input type="checkbox" name = "4" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "5" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "6" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "7" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "8" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">
+                            <input type="checkbox" name = "9" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                            <label class="container">
+                            <input type="checkbox" name = "10" value="1">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>      
+            </section>
+            
 
 
     </main>
-    <script>
-   
-    function updateTextArea() {         
-     var allVals = 0;
-     $('input[type="checkbox"]').each(function() {
-        if(this.checked) {
-        var v = $(this).val();
-        
-        // cons'ole.log(input.getAttribute('name'))
-      
-      allVals+= +v
-        }
-     });
-     $('#bileti').text('Izbrahte '+allVals+ 'broq bileti')
-  }
 
-   $('input[type="checkbox"]').change(updateTextArea);
-   $('input[type="checkbox"]').change(function(){
-    var input = $(this)
-        var sedalka = $(input).attr('name')
-        var red = input.closest('div').attr('id')
-        
-            // $('#zakupuvane').append($('<p>')).text=('ред еди кой си, място :'+sedalka)
-        var containerSeats = document.getElementById('zakupuvane')
-        var p = document.createElement('p')
-        p.innerHTML=`ред ${red} еди кой си, място :${sedalka}`
-        containerSeats.appendChild(p)
-   })
-// pri izbor na  check box, shte pravi nov obekt bilet
-// pri povtorna promqna na check boksa, shte tyrsi v biletite i ako veche ima takyw - shte go iztrie ot ekrana
-
-//  var p = $('<p>');
-        // p.text('Zashto ne go uchihme predi mejdinniq proekt ?!');
-        // $('.container').append($('<p>').text('Ebasi qkoto'));
-    </script>
+    <script src="scripts/buyingTickets.js"></script>
 </body>
 </html>
