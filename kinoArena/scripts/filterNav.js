@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function() {
 
 var vsichki = document.querySelectorAll('.filter');
 Array.prototype.forEach.call(vsichki, vsqko =>{
@@ -52,30 +53,50 @@ strelka2.addEventListener('click',function(){
         }   
     }
 })
+// var malkiLisa=false;
+// document.getElementById('malki').addEventListener('click',()=>{
+//     malkiLisa=true;
+//     console.log(malkiLisa)
+// })
 
+// function pokaji(elementZaPOkazvane){
+//     $('.checkedMovies').fadeOut().css('display','none')
+//     elementZaPOkazvane.fadeIn().css('display','flex')
+// }
+function pokaji(elementZaPOkazvane){
+    $('.checkedMovies').css('display','none')
+    elementZaPOkazvane.css('display','flex')
+}
+
+
+// console.log(malkiLisa)
 vsichki[0].addEventListener('click',()=>{
-
-    $('.checkedMovies').fadeOut().css('display','none')
-    $('#allMovies').fadeIn().css('display','flex')
+    // if(malkiLisa){
+    // pokaji($('#allMovies'))
+    // }else{
+        pokaji($('#allMoviesSmall'))
+    // }
 })
 vsichki[1].addEventListener('click',()=>{
-    $('.checkedMovies').fadeOut().css('display','none');
-    $('#forKids').fadeIn().css('display','flex')
+    // if(malkiLisa===true){   
+    pokaji($('#forKids'))
+    // }else{
+    //     pokaji($('#forKidsSmall')) 
+    // }
+   
 })
 vsichki[2].addEventListener('click',()=>{
-    $('.checkedMovies').fadeOut().css('display','none');
-    $('#imax').fadeIn().css('display','flex')
+    pokaji($('#imax'))
 })
 vsichki[3].addEventListener('click',()=>{
-    $('.checkedMovies').fadeOut().css('display','none');
-    $('#premium').fadeIn().css('display','flex')
+    pokaji($('#premium'))
 }) 
 vsichki[4].addEventListener('click',()=>{
-    $('.checkedMovies').fadeOut().css('display','none');
-    $('#luxe').fadeIn().css('display','flex')
+    pokaji($('#luxe'))
 }) 
 vsichki[5].addEventListener('click',()=>{
-    $('.checkedMovies').fadeOut().css('display','none');
-    $('#vip').fadeIn().css('display','flex')
+    pokaji($('#vip'))
 }) 
 
+
+})

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="scripts/buyingTickets.js"></script> -->
     <style>
     .izbor{
         display: flex;
@@ -107,13 +108,14 @@
        
         <div class="izbor">
             
-            <section id='zakupuvane'>
+            <div id='zakupuvane'>
                 <div >
                     <p id='bileti'></p>
-                    
                 </div>
-            </section>
-            <section id='screenBox'>
+               
+            </div>
+            
+            <div id='screenBox'>
                 <div>
                     <p>ЕКРАН</p>
                     <img src="assets/images/red-line-png-0.png" alt="screen">
@@ -203,7 +205,7 @@
                             <span class="checkmark"></span>
                         </label>
                     </div>
-                    <div id ='3'> <span>1</span>
+                    <div id ='3'> <span>3</span>
                         <label class="container"> 
                             <input type="checkbox"  name="1" value="1">
                             <span class="checkmark"></span>
@@ -246,12 +248,14 @@
                         </label>
                     </div>
                 </div>      
-            </section>
-            
+            </div>
+        </div>
+        <div><p id='suma'>Обща стойност на билетите: </p></div>
+            <div><button>ПОТВЪРДИ ИЗБРАНИТЕ МЕСТА</button></div>
 
 
     </main>
 
-    <script src="scripts/buyingTickets.js"></script>
+    <script src="scripts/buyingTickets.js"></script>    
 </body>
 </html>

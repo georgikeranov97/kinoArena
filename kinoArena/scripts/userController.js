@@ -52,7 +52,7 @@ window.addEventListener('DOMContentLoaded', function () {
             document.querySelector('.passwordContainer > .error').innerText = 'Invalid password!';
             hasErrors = true;
         }else{
-            document.querySelector('.passwordContaner > .error').innerText = '';
+            document.querySelector('.passwordContainer > .error').innerText = '';
         }
         if(repeatPassword !== password){
             document.querySelector('.repeatPasswordContainer > .error').innerText = 'Invalid repeated password!';

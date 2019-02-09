@@ -1,0 +1,14 @@
+.chooseCinemaMovie{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2em 0em;
+    position: relative;
+
+}
+/* .chooseCinemaMovie select {
+    display: none;
+}
+.select-selected {
+    background-color: DodgerBlue; */

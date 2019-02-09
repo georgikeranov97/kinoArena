@@ -1,3 +1,6 @@
+//kogato nqkoi e lognat tova shte e currentUser
+var currentUser=null
+
 var numberTicket=4000;
 const TICKETS_PRICE = 12;
 class Ticket{
@@ -36,14 +39,16 @@ function updateTextArea() {
        var red = input.closest('div').attr('id')
        
        //tyrsim dali ima veche vednyj natisnata, takava sedalka,zashtoto ako ima povtornoto natiskane e otkaz
-       var choosenSeat = allTicketets.filter(t=> t.numberSeat===sedalka && t.row===red)
-       
+      //  var choosenSeat = allTicketets.filter(t=> t.numberSeat===sedalka && t.row===red)
+       var choosenSeat = allTicketets.findIndex(t=>t.numberSeat===sedalka && t.row===red)
        // filtrirame za da namerim syshtiq tozi izbran elelement
-       if(choosenSeat.length!==0){
-          var forRemove = document.getElementById(`${choosenSeat[0].numberTicket}`)
-          console.log(forRemove)
+       if(choosenSeat!==-1){
+          var forRemove = document.getElementById(`${allTicketets[choosenSeat].numberTicket}`)
+          console.log(allTicketets)
+          allTicketets.splice(choosenSeat,1)
+          console.log(allTicketets)
           forRemove.remove();
-          console.log(forRemove)
+         
        }else{
         // pri izbor na  check box, shte pravi nov obekt bilet
         // pri povtorna promqna na check boksa, shte tyrsi v biletite i ako veche ima takyw - shte go iztrie ot ekrana
@@ -52,10 +57,16 @@ function updateTextArea() {
  
         var p = document.createElement('p')
         p.id=`${newTicket.numberTicket}`;
- 
         p.innerHTML=`ред ${red} еди кой си, място :${sedalka}`
         containerSeats.appendChild(p);
+       
        }
-      })
+       var broi = allTicketets.length;
+       var suma = broi*TICKETS_PRICE
+       $('#suma').text('Obshta dyljima suma:'+suma) 
+      
+      
+      
+})
 
 
