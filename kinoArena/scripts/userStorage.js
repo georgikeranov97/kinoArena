@@ -6,8 +6,17 @@ var userStorage = (function () {
             this.lName = lName;
             this.email = email;
             this.password = password;
+            this.tickets = [];
+            this.favourites=[];
             // this.repeatPassword = repeatPassword;
         }
+        buyTicket(ticket){
+            this.tickets.push(ticket)
+        }
+        addToFavourites(movie){
+            this.favourites.push(movie)
+        }
+        
     }
     let userList = []
     if (localStorage.getItem('userList') !== null) {
@@ -24,7 +33,11 @@ var userStorage = (function () {
 
         register: function (fName, lName, email, password) {
             userList.push(new User(fName, lName, email, password));
+<<<<<<< HEAD
             localStorage.setItem('userList', JSON.stringify(userList));
+=======
+            localStorage.setItem('userList',JSON.stringify(userList))
+>>>>>>> refs/remotes/origin/master
         }
     }
 })();

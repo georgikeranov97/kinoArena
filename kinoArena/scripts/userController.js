@@ -24,12 +24,45 @@
 //     document.querySelector('.registerButton > button').addEventListener('click', function(event) {
 //         event.preventDefault();
 
+<<<<<<< HEAD
 //         const firstName = document.getElementById('firstname').value;
 //         const lastName = document.getElementById('lastname').value;
 //         const email = document.getElementById('email2').value;
 //         const password = document.getElementById('password2').value;
 //         const repeatPassword = document.getElementById('repeatpassword').value;
 //         let hasErrors = false;
+=======
+        if(firstName.trim().length < 3){
+            document.querySelector('.firstNameContainer > .error').innerText = 'Invalid firstname!';
+            hasErrors = true;
+        }else{
+            document.querySelector('.firstNameContainer > .error').innerText = '';
+        }
+        if(lastName.trim().length < 4){
+            document.querySelector('.lastNameContainer > .error').innerText = 'Invalid lastname!';
+            hasErrors = true;
+        }else{
+            document.querySelector('.lastNameContainer > .error').innerText = '';
+        }
+        if(!isEmailValid(email)){
+            document.querySelector('.emailContainer > .error').innerText = 'Invalid email!';
+            hasErrors = true;
+        }else{
+            document.querySelector('.emailContainer > .error').innerText = '';
+        }
+        if(password.trim().length < 6){
+            document.querySelector('.passwordContainer > .error').innerText = 'Invalid password!';
+            hasErrors = true;
+        }else{
+            document.querySelector('.passwordContainer > .error').innerText = '';
+        }
+        if(repeatPassword !== password){
+            document.querySelector('.repeatPasswordContainer > .error').innerText = 'Invalid repeated password!';
+            hasErrors = true;
+        }else{
+            document.querySelector('.repeatPasswordContainer > .error').innerText = '';
+        }
+>>>>>>> refs/remotes/origin/master
 
 //         if(firstName.trim().length < 3){
 //             document.querySelector('.firstNameContainer > .error').innerText = 'Invalid firstname!';

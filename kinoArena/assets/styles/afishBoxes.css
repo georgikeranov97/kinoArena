@@ -1,3 +1,10 @@
+
+.izgled {
+  display:flex;
+    justify-content: space-evenly; 
+    color:white;
+}
+
 #vkaraiTuk{
     display: flex;
     flex-wrap: wrap;

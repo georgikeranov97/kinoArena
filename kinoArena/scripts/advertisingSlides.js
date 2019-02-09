@@ -1,4 +1,4 @@
-
+document.addEventListener("DOMContentLoaded", function() {
     var radio1 = document.querySelector('#radioOne')
     var radio2 = document.querySelector('#radioTwo')
     var radio3 = document.getElementById('radioThree')
@@ -74,6 +74,9 @@ var reklamenPanel3=document.querySelector('#reklamenPanel3')
         moveSlide3()
     },false)
 
+
+
+    
 
 var left1=0;
 var left2=0;
@@ -236,4 +239,4 @@ var id;
     }
 
 
-  
+})

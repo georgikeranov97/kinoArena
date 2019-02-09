@@ -1,0 +1,198 @@
+<main>
+    <div class='chooseCinemaMovie'>
+         <select name="choose" id="chooseCinema">
+             <option value="" selected disabled>Избери кино</option>
+         </select>
+         <select name="choosemovie" id="chooseMovie">
+             <option value="" selected disabled>Избери филм</option>
+         </select>
+         <input type="date" name="" id="">
+             
+    </div>
+
+     <div class='filterNav'>
+         <div class='arrow' id='oneArrow' tabindex="0"><img src="assets/images/red_arrow.png" alt=""></div>   
+         <div class="tablica">
+         <table id="tableNav">
+         <tr class="trBorderBottom">
+             <th class="filter pointer" id="firstMarked"><p>ВСИЧКИ ФИЛМИ</p></th>
+             <th class="filter pointer"> <p>ДЕТСКИ ФИЛМИ</p></th>
+             <th class="filter pointer "> 
+                 <img class="defaultImg" src="assets/images/imax.png" alt="imax">
+                 <img class='hoverImg' src="assets/images/imax-hover.png" alt="imax-hover">
+             </th>
+             <th class="filter pointer">  
+                 <img src="assets/images/premium.png" alt="premium" class="defaultImg">
+                 <img src="assets/images/premium-hover.png" alt="premium-hover" class="hoverImg">
+             </th>
+             <th class="filter pointer"> 
+                 <img src="assets/images/luxe.png" alt="luxe" class="defaultImg">
+                 <img src="assets/images/luxe-hover.png" alt="luxe-hover" class="hoverImg">
+             </th>
+             <th class="filter pointer">  
+                 <img src="assets/images/vip.png" alt="vip" class="defaultImg">
+                 <img src="assets/images/vip-hover.png" alt="vip-hover" class="hoverImg">
+             </th>
+             <th class="filter pointer"> <p>ОЧАКВАЙТЕ СКОРО</p></th>
+         </tr>
+         </table>
+     </div>
+         <div class='arrow' id='twoArrow' tabindex="0"><img src="assets/images/red_arrow.png" alt=""></div>
+     </div>
+
+     <!-- <div class='izgled'>
+         <p class="pointer" id="malki">ПОКАЖИ МАЛКИ </p>
+     
+         <p class="pointer" id="golemi"> ПОКАЖИ ГОЛЕМИ</p>
+     </div> -->
+     <div id="mainMovies">
+         <div class='checkedMovies' id='allMovies'></div>
+         <div class='checkedMovies' id='allMoviesSmall'></div>
+         <div class='checkedMovies' id='forKids'></div>
+         <div class='checkedMovies' id='forKidsSmall'></div>
+         <div class='checkedMovies' id='luxe'></div>
+         <div class='checkedMovies' id='luxeSmall'></div>
+         <div class='checkedMovies' id='imax'></div>
+         <div class='checkedMovies' id='imaxSmall'></div>
+         <div class='checkedMovies' id='premium'></div>
+         <div class='checkedMovies' id='premiumSmall'></div>
+         <div class='checkedMovies' id='vip'></div>
+         <div class='checkedMovies' id='vipSmall'></div>
+     </div>
+
+     <div class='advertising'>
+         <div class="advRollers">
+             <div id='reklamenPanel1'>
+                 <div class='izbori'>
+                     <input id='radioOne' type="radio" value='1' name='slaid' checked="checked">
+                     <input id='radioTwo' type="radio" value='2' name='slaid'>
+                     <input id='radioThree' type="radio" value='3' name='slaid'>
+                 </div>
+
+                 <div class='innerPanel'>
+                     <div class='roller' id='one'>
+                         <h4><a href='#'>СПЕЧЕЛИ НАГРАДИ</a></h4>
+                         <div>
+                             <img src="assets/images/promotionsSlides/thumb_10288_promotions_listing.jpeg" alt="Film Off">
+                         </div>
+                         <h5><a href="#">СУПЕР НАГРАДИ</a></h5>
+                         <div>
+                             <a href='#'>Прожекция на АКВА МЕН! Спечели страхотни награди!</a>
+                         </div>
+                         <footer><a href="#">Виж повече</a></footer>
+                     </div>
+
+
+                     <div class='roller' id='two'>
+                         <h4><a href='#'>ПРОМОЦИИ И ОФЕРТИ</a></h4>
+                         <div>
+                             <img src="assets/images/promotionsSlides/thumb_10296_promotions_listing.jpeg" alt="Film Off">
+                         </div>
+                         <h5><a href="#">FILM-OFF</a></h5>
+                         <div>
+                             <a href='#'>Любими филми на промо цена от 01.02 до 28.02</a>
+                         </div>
+                         <footer><a href="#">Виж повече</a></footer>
+                     </div>
+
+
+                     <div class='roller' id='three'>
+                         <h4><a href='#'>ПРОМОЦИИ И ОФЕРТИ</a></h4>
+                         <div>
+                             <img src="assets/images/promotionsSlides/thumb_10192_promotions_listing.jpeg" alt="Film Off">
+                         </div>
+                         <h5><a href="#">НАЙ-ДОБРИТЕ САУНДТРАЦИ НА ГОДИНАТА НА СПЕЦИАЛНИ ЦЕНИ</a></h5>
+                         <div>
+                             <a href='#'>Не е за изпускане!</a>
+                         </div>
+                         <footer><a href="#">Виж повече</a></footer>
+                     </div>
+                 </div>
+             </div>
+             <div id='reklamenPanel2'>
+                 <div class='izbori'>
+                     <input id='radioOne2' type="radio" value='1' name='slaid2' checked="checked">
+                     <input id='radioTwo2' type="radio" value='2' name='slaid2'>
+                     <input id='radioThree2' type="radio" value='3' name='slaid2'>
+                 </div>
+
+                 <div class='innerPanel'>
+                     <div class='roller' id='one'>
+                         <h4><a href='#'>СПЕЧЕЛИ НАГРАДИ</a></h4>
+                         <div>
+                             <img src="assets/images/promotionsSlides/thumb_10397_news_listing.jpeg" alt="Film Off">
+                         </div>
+                         <h5><a href="#">СУПЕР НАГРАДИ</a></h5>
+                         <div>
+                             <a href='#'>Прожекция на АКВА МЕН! Спечели страхотни награди!</a>
+                         </div>
+                         <footer><a href="#">Виж повече</a></footer>
+                     </div>
+
+
+                     <div class='roller' id='two'>
+                         <h4><a href='#'>ПРОМОЦИИ И ОФЕРТИ</a></h4>
+                         <div>
+                             <img src="assets/images/promotionsSlides/thumb_10391_news_listing.jpeg" alt="Film Off">
+                         </div>
+                         <h5><a href="#">FILM-OFF</a></h5>
+                         <div>
+                             <a href='#'>Любими филми на промо цена от 01.02 до 28.02</a>
+                         </div>
+                         <footer><a href="#">Виж повече</a></footer>
+                     </div>
+
+
+                     <div class='roller' id='three'>
+                         <h4><a href='#'>ПРОМОЦИИ И ОФЕРТИ</a></h4>
+                         <div>
+                             <img src="assets/images/promotionsSlides/thumb_10387_news_listing.jpeg" alt="Film Off">
+                         </div>
+                         <h5><a href="#">НАЙ-ДОБРИТЕ САУНДТРАЦИ НА ГОДИНАТА НА СПЕЦИАЛНИ ЦЕНИ</a></h5>
+                         <div>
+                             <a href='#'>Не е за изпускане!</a>
+                         </div>
+                         <footer><a href="#">Виж повече</a></footer>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class='middleBanner'>
+             <a href="#"><img src="assets\images\banner_homePage_middle.jpeg" alt=""></a>
+
+         </div>
+         <div id='reklamenPanel3'>
+             <div class='izbori'>
+                 <input id='radioOne3' type="radio" value='1' name='slaid3' checked="checked">
+                 <input id='radioTwo3' type="radio" value='2' name='slaid3'>
+             </div>
+
+             <div class='innerPanel'>
+                 <div class='roller' id='one3'>
+                     <h4><a href='#'>СПЕЧЕЛИ НАГРАДИ</a></h4>
+                     <div>
+                         <img src="assets/images/promotionsSlides/thumb_10288_promotions_listing.jpeg" alt="Film Off">
+                     </div>
+                     <h5><a href="#">СУПЕР НАГРАДИ</a></h5>
+                     <div>
+                         <a href='#'>Прожекция на АКВА МЕН! Спечели страхотни награди!</a>
+                     </div>
+                     <footer><a href="#">Виж повече</a></footer>
+                 </div>
+
+
+                 <div class='roller' id='two3'>
+                     <h4><a href='#'>ПРОМОЦИИ И ОФЕРТИ</a></h4>
+                     <div>
+                         <img src="assets/images/promotionsSlides/thumb_10296_promotions_listing.jpeg" alt="Film Off">
+                     </div>
+                     <h5><a href="#">FILM-OFF</a></h5>
+                     <div>
+                         <a href='#'>Любими филми на промо цена от 01.02 до 28.02</a>
+                     </div>
+                     <footer><a href="#">Виж повече</a></footer>
+                 </div>
+             </div>
+         </div>
+     </div>
+    
