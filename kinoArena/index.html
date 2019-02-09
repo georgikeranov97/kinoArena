@@ -6,20 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="assets/styles/reset.css">
-    <!-- <link rel="stylesheet" href="assets/styles/style.css"> -->
-=======
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="scripts/homeController.js"></script>
-    <script src="scripts/controlleri.js"></script>
-    <script src="scripts/router.js"></script>
-    <script src="scripts/afishBoxes.js"></script>
-    <script src="scripts/filterNav.js"></script>
-    <script src="scripts/advertisingSlides.js"></script>
+    
 
     <link rel="stylesheet" href="assets/styles/chooseCinemaMovie.css">
->>>>>>> refs/remotes/origin/master
     <link rel="stylesheet" href="assets/styles/mainStyle2.css">
     <link rel="stylesheet" href="assets/styles/filterNav.css">
     <link rel="stylesheet" href="assets/styles/afishBoxes.css">
@@ -29,21 +18,18 @@
     <link rel="stylesheet" href="assets/styles/mainStyles.css">
     <link rel="stylesheet" href="assets/styles/middleBanner.css">
     <link rel="stylesheet" href="assets/styles/fly.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles/login.css">
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="scripts/userStorage.js"></script>
     <script src="scripts/userController.js"></script>
+    <script src="scripts/homeController.js"></script>
     <script src="scripts/router.js"></script>
-=======
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <!-- <script src="scripts/overlay.js"></script> -->
-    
-     
->>>>>>> refs/remotes/origin/master
-
+    <script src="scripts/afishBoxes.js"></script>
+    <script src="scripts/filterNav.js"></script>
+    <script src="scripts/advertisingSlides.js"></script>
 
 
     <style>
@@ -312,7 +298,7 @@
                 <ul>
                     <li><a href="#page=cinemas">КИНА</a></li>
                     <li><a href="#">ПРОГРАМА</a></li>
-                    <li><a href="#" id="loginFormButton">ВХОД</a></li>
+                    <li><a href="#page=login">ВХОД</a></li>
                     <li><a href="#">BG</a></li>
                     <li><a href="#">EN</a></li>
                 </ul>
@@ -358,205 +344,8 @@
     <!-- </div> -->
     <div id="wrapper">
         <main>
-<<<<<<< HEAD
 
 
-            <div class='filterNav'>
-                <div class='arrow' id='oneArrow' tabindex="0"><img src="assets/images/red_arrow.png" alt=""></div>
-                <div class="tablica">
-                    <table id="tableNav">
-                        <tr class="trBorderBottom">
-                            <th class="filter pointer" id="firstMarked">
-                                <p>ВСИЧКИ ФИЛМИ</p>
-                            </th>
-                            <th class="filter pointer">
-                                <p>ДЕТСКИ ФИЛМИ</p>
-                            </th>
-                            <th class="filter pointer ">
-                                <img class="defaultImg" src="assets/images/imax.png" alt="imax">
-                                <img class='hoverImg' src="assets/images/imax-hover.png" alt="imax-hover">
-                            </th>
-                            <th class="filter pointer">
-                                <img src="assets/images/premium.png" alt="premium" class="defaultImg">
-                                <img src="assets/images/premium-hover.png" alt="premium-hover" class="hoverImg">
-                            </th>
-                            <th class="filter pointer">
-                                <img src="assets/images/luxe.png" alt="luxe" class="defaultImg">
-                                <img src="assets/images/luxe-hover.png" alt="luxe-hover" class="hoverImg">
-                            </th>
-                            <th class="filter pointer">
-                                <img src="assets/images/vip.png" alt="vip" class="defaultImg">
-                                <img src="assets/images/vip-hover.png" alt="vip-hover" class="hoverImg">
-                            </th>
-                            <th class="filter pointer">
-                                <p>ОЧАКВАЙТЕ СКОРО</p>
-                            </th>
-                        </tr>
-                    </table>
-                </div>
-                <div class='arrow' id='twoArrow' tabindex="0"><img src="assets/images/red_arrow.png" alt=""></div>
-            </div>
-
-
-            <div id="mainMovies">
-                <div class='checkedMovies' id='allMovies'></div>
-                <div class='checkedMovies' id='forKids'></div>
-                <div class='checkedMovies' id='forKids small'></div>
-                <div class='checkedMovies' id='luxe'></div>
-                <div class='checkedMovies' id='imax'></div>
-                <div class='checkedMovies' id='premium'></div>
-                <div class='checkedMovies' id='vip'></div>
-            </div>
-
-            <div class='advertising'>
-                <div class="advRollers">
-                    <div id='reklamenPanel1'>
-                        <div class='izbori'>
-                            <input id='radioOne' type="radio" value='1' name='slaid' checked="checked">
-                            <input id='radioTwo' type="radio" value='2' name='slaid'>
-                            <input id='radioThree' type="radio" value='3' name='slaid'>
-                        </div>
-
-                        <div class='innerPanel'>
-                            <div class='roller' id='one'>
-                                <h4><a href='#'>СПЕЧЕЛИ НАГРАДИ</a></h4>
-                                <div>
-                                    <img src="assets/images/promotionsSlides/thumb_10288_promotions_listing.jpeg"
-                                        alt="Film Off">
-                                </div>
-                                <h5><a href="#">СУПЕР НАГРАДИ</a></h5>
-                                <div>
-                                    <a href='#'>Прожекция на АКВА МЕН! Спечели страхотни награди!</a>
-                                </div>
-                                <footer><a href="#">Виж повече</a></footer>
-                            </div>
-
-
-                            <div class='roller' id='two'>
-                                <h4><a href='#'>ПРОМОЦИИ И ОФЕРТИ</a></h4>
-                                <div>
-                                    <img src="assets/images/promotionsSlides/thumb_10296_promotions_listing.jpeg"
-                                        alt="Film Off">
-                                </div>
-                                <h5><a href="#">FILM-OFF</a></h5>
-                                <div>
-                                    <a href='#'>Любими филми на промо цена от 01.02 до 28.02</a>
-                                </div>
-                                <footer><a href="#">Виж повече</a></footer>
-                            </div>
-
-
-                            <div class='roller' id='three'>
-                                <h4><a href='#'>ПРОМОЦИИ И ОФЕРТИ</a></h4>
-                                <div>
-                                    <img src="assets/images/promotionsSlides/thumb_10192_promotions_listing.jpeg"
-                                        alt="Film Off">
-                                </div>
-                                <h5><a href="#">НАЙ-ДОБРИТЕ САУНДТРАЦИ НА ГОДИНАТА НА СПЕЦИАЛНИ ЦЕНИ</a></h5>
-                                <div>
-                                    <a href='#'>Не е за изпускане!</a>
-                                </div>
-                                <footer><a href="#">Виж повече</a></footer>
-                            </div>
-                        </div>
-                    </div>
-                    <div id='reklamenPanel2'>
-                        <div class='izbori'>
-                            <input id='radioOne2' type="radio" value='1' name='slaid2' checked="checked">
-                            <input id='radioTwo2' type="radio" value='2' name='slaid2'>
-                            <input id='radioThree2' type="radio" value='3' name='slaid2'>
-                        </div>
-
-                        <div class='innerPanel'>
-                            <div class='roller' id='one'>
-                                <h4><a href='#'>СПЕЧЕЛИ НАГРАДИ</a></h4>
-                                <div>
-                                    <img src="assets/images/promotionsSlides/thumb_10397_news_listing.jpeg"
-                                        alt="Film Off">
-                                </div>
-                                <h5><a href="#">СУПЕР НАГРАДИ</a></h5>
-                                <div>
-                                    <a href='#'>Прожекция на АКВА МЕН! Спечели страхотни награди!</a>
-                                </div>
-                                <footer><a href="#">Виж повече</a></footer>
-                            </div>
-
-
-                            <div class='roller' id='two'>
-                                <h4><a href='#'>ПРОМОЦИИ И ОФЕРТИ</a></h4>
-                                <div>
-                                    <img src="assets/images/promotionsSlides/thumb_10391_news_listing.jpeg"
-                                        alt="Film Off">
-                                </div>
-                                <h5><a href="#">FILM-OFF</a></h5>
-                                <div>
-                                    <a href='#'>Любими филми на промо цена от 01.02 до 28.02</a>
-                                </div>
-                                <footer><a href="#">Виж повече</a></footer>
-                            </div>
-
-
-                            <div class='roller' id='three'>
-                                <h4><a href='#'>ПРОМОЦИИ И ОФЕРТИ</a></h4>
-                                <div>
-                                    <img src="assets/images/promotionsSlides/thumb_10387_news_listing.jpeg"
-                                        alt="Film Off">
-                                </div>
-                                <h5><a href="#">НАЙ-ДОБРИТЕ САУНДТРАЦИ НА ГОДИНАТА НА СПЕЦИАЛНИ ЦЕНИ</a></h5>
-                                <div>
-                                    <a href='#'>Не е за изпускане!</a>
-                                </div>
-                                <footer><a href="#">Виж повече</a></footer>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class='middleBanner'>
-                    <a href="#"><img src="assets\images\banner_homePage_middle.jpeg" alt=""></a>
-
-                </div>
-                <div id='reklamenPanel3'>
-                    <div class='izbori'>
-                        <input id='radioOne3' type="radio" value='1' name='slaid3' checked="checked">
-                        <input id='radioTwo3' type="radio" value='2' name='slaid3'>
-                    </div>
-
-                    <div class='innerPanel'>
-                        <div class='roller' id='one3'>
-                            <h4><a href='#'>СПЕЧЕЛИ НАГРАДИ</a></h4>
-                            <div>
-                                <img src="assets/images/promotionsSlides/thumb_10288_promotions_listing.jpeg"
-                                    alt="Film Off">
-                            </div>
-                            <h5><a href="#">СУПЕР НАГРАДИ</a></h5>
-                            <div>
-                                <a href='#'>Прожекция на АКВА МЕН! Спечели страхотни награди!</a>
-                            </div>
-                            <footer><a href="#">Виж повече</a></footer>
-                        </div>
-
-
-                        <div class='roller' id='two3'>
-                            <h4><a href='#'>ПРОМОЦИИ И ОФЕРТИ</a></h4>
-                            <div>
-                                <img src="assets/images/promotionsSlides/thumb_10296_promotions_listing.jpeg"
-                                    alt="Film Off">
-                            </div>
-                            <h5><a href="#">FILM-OFF</a></h5>
-                            <div>
-                                <a href='#'>Любими филми на промо цена от 01.02 до 28.02</a>
-                            </div>
-                            <footer><a href="#">Виж повече</a></footer>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="banner">
-                <a href="#"><img src="assets/images/footer-banner.png" alt=""></a>
-            </div>
-=======
-
->>>>>>> refs/remotes/origin/master
         </main>
         <footer>
             <div id="wrapper-footer">
@@ -629,14 +418,5 @@
   
     <script src="scripts/flyingPopcorns.js"></script>
 </body>
-<<<<<<< HEAD
-<script src="scripts/flyingPopcorns.js"></script>
-
-<script src="scripts/flyingPopcorns.js"></script>
-<script src="scripts/afishBoxes.js"></script>
-<script src="scripts/filterNav.js"></script>
-=======
-
->>>>>>> refs/remotes/origin/master
 
 </html>

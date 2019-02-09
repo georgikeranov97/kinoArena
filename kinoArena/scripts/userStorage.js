@@ -33,11 +33,7 @@ var userStorage = (function () {
 
         register: function (fName, lName, email, password) {
             userList.push(new User(fName, lName, email, password));
-<<<<<<< HEAD
             localStorage.setItem('userList', JSON.stringify(userList));
-=======
-            localStorage.setItem('userList',JSON.stringify(userList))
->>>>>>> refs/remotes/origin/master
         }
     }
 })();
