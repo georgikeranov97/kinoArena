@@ -2,9 +2,125 @@
 //     event.preventDefault();
 // });
 
+
+
+var id = 0;
+class Afish{
+    constructor(title,poster,bgLanguage,restrictions,trailerLink,moreLink,isForKids,isImax, isPremium, isLuxe,isVip){
+        this.title = title;
+        this.poster = poster;
+        this.bgLanguage = bgLanguage;
+        this.restrictions = restrictions;
+        this.trailerLink = trailerLink;
+    this.moreLink = moreLink;
+    this.id= ++id;
+    // this.imaLi = false; 
+    // this.daIzlizatLi=true;
+    this.isForKids = isForKids;
+    this.isImax=isImax;
+    this.isPremium=isPremium;
+    this.isLuxe=isLuxe;
+    this.isVip=isVip;
+    }
+ 
+    showInDOM(){
+       
+       return `
+        <div class="afish">
+            <div class="InnerAfish" id=${this.id}>
+                <a href="${this.trailerLink}" class="trailer">
+                    <span>
+                        <i class="fas fa-play-circle"></i>
+                        <p>ТРЕЙЛЪР</p>
+                    </span>
+                </a>
+                <a href="${this.moreLink}"  class="podrobno"> 
+                    <span>
+                        <i class="fas fa-star"></i>
+                    <p>ПОДРОБНО</p>
+                    </span>
+                </a>
+                <a href="#"  class="liubimi">
+                    <span>
+                        <i class="fas fa-heart"></i>
+                        <p>ДОБАВИ В ЛЮБИМИ</p>
+                    </span>
+                </a>
+                <img  src="${this.poster}">
+            </div>
+            <div class="cutText">
+                <h3>${this.title}</h3>
+            </div>
+            <div class="infoZaFilma">
+                <div class="stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <div class="LanguageAge"><img src="${this.bgLanguage}" alt=""></div>
+                <div class="LanguageAge"><img src="${this.restrictions}" alt=""></div>
+            </div>
+        </div>`
+        // vkaraiTuk.appendChild(div)
+        
+    }
+    showInDOMSmall(){
+       return `
+        <div class="afish2">
+            <div class="InnerAfish2" id=${this.id}>
+                <a href="${this.trailerLink}" class="trailer2">
+                    <span>
+                        <i class="fas fa-play-circle"></i>
+                        <p>ТРЕЙЛЪР</p>
+                    </span>
+                </a>
+                <a href="${this.moreLink}"  class="podrobno2"> 
+                    <span>
+                        <i class="fas fa-star2"></i>
+                    <p>ПОДРОБНО</p>
+                    </span>
+                </a>
+                <a href="#"  class="liubimi2">
+                    <span>
+                        <i class="fas fa-heart2"></i>
+                        <p>ДОБАВИ В ЛЮБИМИ</p>
+                    </span>
+                </a>
+                <img  src="${this.poster}">
+            </div>
+            <div class="cutText2">
+                <h5>${this.title}</h5>
+            </div>
+            <div class="infoZaFilma2">
+                <div class="stars2">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <div class="LanguageAge2"><img src="${this.bgLanguage}" alt=""></div>
+                <div class="LanguageAge2"><img src="${this.restrictions}" alt=""></div>
+            </div>
+        </div>`
+    }
+}
+
+var lion = new Afish('Car Luv','assets/images/lionKing.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#',"#",true,true,false,false,true)
+var dragon = new Afish('How to train dragon','assets/images/poster_1.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#','#',false,true,true,true,false)
+var despicable = new Afish('Despicable me 3','assets/images/poster_2.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#','#',true,false,true,true,true)
+var beauty = new Afish('Beauty and the Beast','assets/images/poster_3.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#','#',false,true,true,false,false)
+var queen =new Afish('БОХЕМСКА РАПСОДИЯ','assets/images/queen.jpg','assets/images/bezOgranichenq.png','','#','#',false,true,true,false,false)
+var allMovies = [lion,dragon,despicable,beauty,queen]
+
+
 document.addEventListener("DOMContentLoaded", function() {
         // var vkaraiTuk2 = $('#vkaraiTuk2')[0]
         // var vkaraiTuk = $('#vkaraiTuk')[0]
+
+
 
     var forKidsDiv=document.getElementById('forKids')
     // var forKidsDiv2=document.getElementById('forKidsSmall')
@@ -254,118 +370,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 })
 
-
-
-
-var id = 0;
-class Afish{
-    constructor(title,poster,bgLanguage,restrictions,trailerLink,moreLink,isForKids,isImax, isPremium, isLuxe,isVip){
-        this.title = title;
-        this.poster = poster;
-        this.bgLanguage = bgLanguage;
-        this.restrictions = restrictions;
-        this.trailerLink = trailerLink;
-    this.moreLink = moreLink;
-    this.id= ++id;
-    // this.imaLi = false; 
-    // this.daIzlizatLi=true;
-    this.isForKids = isForKids;
-    this.isImax=isImax;
-    this.isPremium=isPremium;
-    this.isLuxe=isLuxe;
-    this.isVip=isVip;
-    }
- 
-    showInDOM(){
-       
-       return `
-        <div class="afish">
-            <div class="InnerAfish" id=${this.id}>
-                <a href="${this.trailerLink}" class="trailer">
-                    <span>
-                        <i class="fas fa-play-circle"></i>
-                        <p>ТРЕЙЛЪР</p>
-                    </span>
-                </a>
-                <a href="${this.moreLink}"  class="podrobno"> 
-                    <span>
-                        <i class="fas fa-star"></i>
-                    <p>ПОДРОБНО</p>
-                    </span>
-                </a>
-                <a href="#"  class="liubimi">
-                    <span>
-                        <i class="fas fa-heart"></i>
-                        <p>ДОБАВИ В ЛЮБИМИ</p>
-                    </span>
-                </a>
-                <img  src="${this.poster}">
-            </div>
-            <div class="cutText">
-                <h3>${this.title}</h3>
-            </div>
-            <div class="infoZaFilma">
-                <div class="stars">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                </div>
-                <div class="LanguageAge"><img src="${this.bgLanguage}" alt=""></div>
-                <div class="LanguageAge"><img src="${this.restrictions}" alt=""></div>
-            </div>
-        </div>`
-        // vkaraiTuk.appendChild(div)
-        
-    }
-    showInDOMSmall(){
-       return `
-        <div class="afish2">
-            <div class="InnerAfish2" id=${this.id}>
-                <a href="${this.trailerLink}" class="trailer2">
-                    <span>
-                        <i class="fas fa-play-circle"></i>
-                        <p>ТРЕЙЛЪР</p>
-                    </span>
-                </a>
-                <a href="${this.moreLink}"  class="podrobno2"> 
-                    <span>
-                        <i class="fas fa-star2"></i>
-                    <p>ПОДРОБНО</p>
-                    </span>
-                </a>
-                <a href="#"  class="liubimi2">
-                    <span>
-                        <i class="fas fa-heart2"></i>
-                        <p>ДОБАВИ В ЛЮБИМИ</p>
-                    </span>
-                </a>
-                <img  src="${this.poster}">
-            </div>
-            <div class="cutText2">
-                <h5>${this.title}</h5>
-            </div>
-            <div class="infoZaFilma2">
-                <div class="stars2">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                </div>
-                <div class="LanguageAge2"><img src="${this.bgLanguage}" alt=""></div>
-                <div class="LanguageAge2"><img src="${this.restrictions}" alt=""></div>
-            </div>
-        </div>`
-    }
-}
-var lion = new Afish('Car Luv','assets/images/lionKing.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#',"#",true,true,false,false,true)
-var dragon = new Afish('How to train dragon','assets/images/poster_1.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#','#',false,true,true,true,false)
-var despicable = new Afish('Despicable me 3','assets/images/poster_2.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#','#',true,false,true,true,true)
-var beauty = new Afish('Beauty and the Beast','assets/images/poster_3.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#','#',false,true,true,false,false)
-var queen =new Afish('БОХЕМСКА РАПСОДИЯ','assets/images/queen.jpg','assets/images/bezOgranichenq.png','','#','#',false,true,true,false,false)
-var allMovies = [lion,dragon,despicable,beauty,queen]
 
 
 
