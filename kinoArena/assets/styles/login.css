@@ -1,9 +1,16 @@
 *{
     box-sizing: border-box;
 }
-body, html {
-    height: 100%;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-stretch: extra-condensed;
 }
+
+#loginBackground{
+    display: flex;
+    justify-content: center;
+}
+
 .login-register-form{
     background-color: #111;
     display: inline-block;
@@ -16,10 +23,7 @@ body, html {
 .justLogin{
     height: 100%;
 }
-body {
-    font-family: Helvetica, Arial, sans-serif;
-    font-stretch: extra-condensed;
-}
+
 
 h1 {
     color: #fff;

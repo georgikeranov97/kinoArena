@@ -1,12 +1,12 @@
 #wrapper{
     border:2px solid whitesmoke;
-    width: 1100px;
+    width: 1000px;
     margin: 0 auto;
 
    }
 body {
 font-family: Arial, Helvetica, sans-serif;
-background: url("assets/images/background2.jpg");
+background: url("../images/background2.jpg");
 background-repeat: no-repeat;
 background-size: cover;
 margin: 0 0 99px;
@@ -120,7 +120,7 @@ margin: 0 0 99px;
     }
 
     #wrapper-footer {
-        background: url("assets/images/footer-background.png") no-repeat center;;
+        background: url("../images/footer-background.png") no-repeat center;;
         
         background-position: bottom center;
         background-size: contain;

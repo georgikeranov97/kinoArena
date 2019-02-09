@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,255 +8,257 @@
     <title>Document</title>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <style>
-    .izbor{
-        
-    }
-    .izbor p {
-    margin: 0 auto;
-    width: 10%;
-    }
-    img{
-        position: relative;
-    top: -17em;
-    left: 5em;
-    }
-    /* Customize the label (the container) */
-.container {
-  display:inline-block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+        .izbor {}
 
-/* Hide the browser's default checkbox */
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
+        .izbor p {
+            margin: 0 auto;
+            width: 10%;
+        }
 
-/* Create a custom checkbox */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: red
-}
+        img {
+            position: relative;
+            top: -17em;
+            left: 5em;
+        }
 
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: gray
-}
+        /* Customize the label (the container) */
+        .container {
+            display: inline-block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
 
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color:green
-}
+        /* Hide the browser's default checkbox */
+        .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
 
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
+        /* Create a custom checkbox */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: red
+        }
 
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
+        /* On mouse-over, add a grey background color */
+        .container:hover input~.checkmark {
+            background-color: gray
+        }
 
-/* Style the checkmark/indicator */
-.container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
+        /* When the checkbox is checked, add a blue background */
+        .container input:checked~.checkmark {
+            background-color: green
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the checkmark when checked */
+        .container input:checked~.checkmark:after {
+            display: block;
+        }
+
+        /* Style the checkmark/indicator */
+        .container .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
     </style>
 </head>
+
 <body>
     <main>
         <div id='zakupuvane'>
             <p id='bileti'></p>
-            
+
         </div>
         <div class="izbor">
             <p>ЕКРАН</p>
             <img src="assets/images/red-line-png-0.png" alt="screen">
             <div id='izborNaMesta'>
-                <div id='1'> 
+                <div id='1'>
                     <label class="container">
-                        <input type="checkbox"  name="1" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "2" value="1">
+                        <input type="checkbox" name="1" value="1">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                        <input type="checkbox" name = "3" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                        <label class="container">
-                        <input type="checkbox" name = "4" value="1">
+                        <input type="checkbox" name="2" value="1">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                        <input type="checkbox" name = "5" value="1">
+                        <input type="checkbox" name="3" value="1">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                        <input type="checkbox" name = "6" value="1">
+                        <input type="checkbox" name="4" value="1">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                        <input type="checkbox" name = "7" value="1">
+                        <input type="checkbox" name="5" value="1">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                        <input type="checkbox" name = "8" value="1">
+                        <input type="checkbox" name="6" value="1">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                        <input type="checkbox" name = "9" value="1">
+                        <input type="checkbox" name="7" value="1">
                         <span class="checkmark"></span>
                     </label>
-                        <label class="container">
-                        <input type="checkbox" name = "10" value="1">
+                    <label class="container">
+                        <input type="checkbox" name="8" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <input type="checkbox" name="9" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <input type="checkbox" name="10" value="1">
                         <span class="checkmark"></span>
                     </label>
                 </div>
                 <div id='2'>
                     <label class="container">
-                        <input type="checkbox"  name="1" value="1">
+                        <input type="checkbox" name="1" value="1">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                        <input type="checkbox" name = "2" value="1">
+                        <input type="checkbox" name="2" value="1">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                        <input type="checkbox" name = "3" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                        <label class="container">
-                        <input type="checkbox" name = "4" value="1">
+                        <input type="checkbox" name="3" value="1">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                        <input type="checkbox" name = "5" value="1">
+                        <input type="checkbox" name="4" value="1">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                        <input type="checkbox" name = "6" value="1">
+                        <input type="checkbox" name="5" value="1">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                        <input type="checkbox" name = "7" value="1">
+                        <input type="checkbox" name="6" value="1">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                        <input type="checkbox" name = "8" value="1">
+                        <input type="checkbox" name="7" value="1">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                        <input type="checkbox" name = "9" value="1">
+                        <input type="checkbox" name="8" value="1">
                         <span class="checkmark"></span>
                     </label>
-                        <label class="container">
-                        <input type="checkbox" name = "10" value="1">
+                    <label class="container">
+                        <input type="checkbox" name="9" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <input type="checkbox" name="10" value="1">
                         <span class="checkmark"></span>
                     </label>
                 </div>
-                <div id ='3'>
+                <div id='3'>
                     <label class="container">
-                        <input type="checkbox"  name="1" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">
-                        <input type="checkbox" name = "2" value="1">
+                        <input type="checkbox" name="1" value="1">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                        <input type="checkbox" name = "3" value="1">
-                        <span class="checkmark"></span>
-                    </label>
-                        <label class="container">
-                        <input type="checkbox" name = "4" value="1">
+                        <input type="checkbox" name="2" value="1">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                        <input type="checkbox" name = "5" value="1">
+                        <input type="checkbox" name="3" value="1">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                        <input type="checkbox" name = "6" value="1">
+                        <input type="checkbox" name="4" value="1">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                        <input type="checkbox" name = "7" value="1">
+                        <input type="checkbox" name="5" value="1">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                        <input type="checkbox" name = "8" value="1">
+                        <input type="checkbox" name="6" value="1">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">
-                        <input type="checkbox" name = "9" value="1">
+                        <input type="checkbox" name="7" value="1">
                         <span class="checkmark"></span>
                     </label>
-                        <label class="container">
-                        <input type="checkbox" name = "10" value="1">
+                    <label class="container">
+                        <input type="checkbox" name="8" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <input type="checkbox" name="9" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <input type="checkbox" name="10" value="1">
                         <span class="checkmark"></span>
                     </label>
                 </div>
-        </div>   
+            </div>
 
 
     </main>
     <script>
-   
-    function updateTextArea() {         
-     var allVals = 0;
-     $('input[type="checkbox"]').each(function() {
-        if(this.checked) {
-        var v = $(this).val();
-        
-        // cons'ole.log(input.getAttribute('name'))
-      
-      allVals+= +v
-        }
-     });
-     $('#bileti').text('Izbrahte '+allVals+ 'broq bileti')
-  }
 
-   $('input[type="checkbox"]').change(updateTextArea);
-   $('input[type="checkbox"]').change(function(){
-    var input = $(this)
-        var sedalka = $(input).attr('name')
-        var red = input.closest('div').attr('id')
-        
+        function updateTextArea() {
+            var allVals = 0;
+            $('input[type="checkbox"]').each(function () {
+                if (this.checked) {
+                    var v = $(this).val();
+
+                    // cons'ole.log(input.getAttribute('name'))
+
+                    allVals += +v
+                }
+            });
+            $('#bileti').text('Izbrahte ' + allVals + 'broq bileti')
+        }
+
+        $('input[type="checkbox"]').change(updateTextArea);
+        $('input[type="checkbox"]').change(function () {
+            var input = $(this)
+            var sedalka = $(input).attr('name')
+            var red = input.closest('div').attr('id')
+
             // $('#zakupuvane').append($('<p>')).text=('ред еди кой си, място :'+sedalka)
-        var containerSeats = document.getElementById('zakupuvane')
-        var p = document.createElement('p')
-        p.innerHTML=`ред ${red} еди кой си, място :${sedalka}`
-        containerSeats.appendChild(p)
-   })
+            var containerSeats = document.getElementById('zakupuvane')
+            var p = document.createElement('p')
+            p.innerHTML = `ред ${red} еди кой си, място :${sedalka}`
+            containerSeats.appendChild(p)
+        })
 // pri izbor na  check box, shte pravi nov obekt bilet
 // pri povtorna promqna na check boksa, shte tyrsi v biletite i ako veche ima takyw - shte go iztrie ot ekrana
 
@@ -264,4 +267,5 @@
         // $('.container').append($('<p>').text('Ebasi qkoto'));
     </script>
 </body>
+
 </html>

@@ -1,7 +1,7 @@
-var userStorage = (function() {
+var userStorage = (function () {
 
-    class User{
-        constructor(fName, lName, email, password){
+    class User {
+        constructor(fName, lName, email, password) {
             this.fName = fName;
             this.lName = lName;
             this.email = email;
@@ -9,18 +9,22 @@ var userStorage = (function() {
             // this.repeatPassword = repeatPassword;
         }
     }
-
-    userList = [
-        new User('Gosho', 'Goshev', 'gosho@user.com', '123456')
-    ];
-
+    let userList = []
+    if (localStorage.getItem('userList') !== null) {
+        userList = JSON.parse(localStorage.getItem('userList'));
+    } else {
+        userList = [
+            new User('Gosho', 'Goshev', 'gosho@user.com', '123456')
+        ];
+    }
     return {
-        login: function(email, password) {
+        login: function (email, password) {
             return userList.find(user => user.email === email && user.password === password);
         },
 
-        register: function(fName, lName, email, password) {
+        register: function (fName, lName, email, password) {
             userList.push(new User(fName, lName, email, password));
+            localStorage.setItem('userList', JSON.stringify(userList));
         }
     }
 })();

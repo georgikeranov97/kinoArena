@@ -6,37 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <!-- <link rel="stylesheet" href="assets/styles/style.css"> -->
     <link rel="stylesheet" href="assets/styles/mainStyle2.css">
     <link rel="stylesheet" href="assets/styles/filterNav.css">
     <link rel="stylesheet" href="assets/styles/afishBoxes.css">
-    <link rel="stylesheet" href="assets/styles/reset.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles/advertisingSlides.css">
     <link rel="stylesheet" href="assets/styles/mainStyles.css">
     <link rel="stylesheet" href="assets/styles/middleBanner.css">
     <link rel="stylesheet" href="assets/styles/fly.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/login.css">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="scripts/userStorage.js"></script>
+    <script src="scripts/userController.js"></script>
+    <script src="scripts/router.js"></script>
 
 
 
     <style>
-        #wrapper{
-        border:2px solid whitesmoke;
-        width: 1000px;
-        margin: 0 auto;
+        #wrapper {
+            border: 2px solid whitesmoke;
+            width: 1000px;
+            margin: 0 auto;
 
-       }
-    body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: url("assets/images/background2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0 0 99px;
-    }
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-stretch: condensed;
+            background: url("assets/images/background2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0 0 99px;
+        }
+        html {
+            position: relative;
+            /* min-height: 100%; */
+        }
 
-    .main-navigation {
+        .main-navigation {
             display: flex;
             justify-content: center;
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.58) 100%);
@@ -46,7 +57,7 @@
             top: 0;
             z-index: 99999;
             width: 100%;
-    }
+        }
 
         .main-navigation>nav>ul>li>a {
             text-decoration: none;
@@ -144,8 +155,9 @@
         }
 
         #wrapper-footer {
-            background: url("assets/images/footer-background.png") no-repeat center;;
-            
+            background: url("assets/images/footer-background.png") no-repeat center;
+            ;
+
             background-position: bottom center;
             background-size: contain;
             height: 70vh;
@@ -184,35 +196,40 @@
             margin-top: 20px;
             width: 310px;
         }
-        .footer-nav > ul > li:last-child{
-            margin-left: 20px;
-        }
-        .fb-page{
-            margin-left: 170px;
-        }
-        .advertising {
-        display: flex;
-        justify-content: space-between;
-        }
-        #bottom-footer{
-        width: 100%;
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        height: 15vh;
-        background-color: #000;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        color: #fff;
-        font-stretch: condensed;
-        padding-top: 40px;
-        }
-        #bottom-footer > p:nth-child(2) > a{
+
+        .footer-nav>ul>li:last-child {
             margin-left: 20px;
         }
 
-        footer i{
+        .fb-page {
+            margin-left: 170px;
+        }
+
+        .advertising {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #bottom-footer {
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            height: 15vh;
+            background-color: #000;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            color: #fff;
+            font-stretch: condensed;
+            padding-top: 40px;
+        }
+
+        #bottom-footer>p:nth-child(2)>a {
+            margin-left: 20px;
+        }
+
+        footer i {
             color: #fff;
             border: 1px solid #fff;
             border-radius: 50%;
@@ -222,14 +239,13 @@
             padding-left: 5px;
             box-sizing: border-box;
         }
-        #firstFooterIcon{
+
+        #firstFooterIcon {
             padding-left: 10px;
         }
-        html {
-            position: relative;
-            min-height: 100%;
-        }
-   </style>
+
+       
+    </style>
 </head>
 
 <body>
@@ -277,7 +293,7 @@
                 <ul>
                     <li><a href="#">КИНА</a></li>
                     <li><a href="#">ПРОГРАМА</a></li>
-                    <li><a href="#" id="loginForm">ВХОД</a></li>
+                    <li><a href="#" id="loginFormButton">ВХОД</a></li>
                     <li><a href="#">BG</a></li>
                     <li><a href="#">EN</a></li>
                 </ul>
@@ -323,35 +339,41 @@
     <!-- </div> -->
     <div id="wrapper">
         <main>
-           
+
 
             <div class='filterNav'>
-                <div class='arrow' id='oneArrow' tabindex="0"><img src="assets/images/red_arrow.png" alt=""></div>   
+                <div class='arrow' id='oneArrow' tabindex="0"><img src="assets/images/red_arrow.png" alt=""></div>
                 <div class="tablica">
-                <table id="tableNav">
-                <tr class="trBorderBottom">
-                    <th class="filter pointer" id="firstMarked"><p>ВСИЧКИ ФИЛМИ</p></th>
-                    <th class="filter pointer"> <p>ДЕТСКИ ФИЛМИ</p></th>
-                    <th class="filter pointer "> 
-                        <img class="defaultImg" src="assets/images/imax.png" alt="imax">
-                        <img class='hoverImg' src="assets/images/imax-hover.png" alt="imax-hover">
-                    </th>
-                    <th class="filter pointer">  
-                        <img src="assets/images/premium.png" alt="premium" class="defaultImg">
-                        <img src="assets/images/premium-hover.png" alt="premium-hover" class="hoverImg">
-                    </th>
-                    <th class="filter pointer"> 
-                        <img src="assets/images/luxe.png" alt="luxe" class="defaultImg">
-                        <img src="assets/images/luxe-hover.png" alt="luxe-hover" class="hoverImg">
-                    </th>
-                    <th class="filter pointer">  
-                        <img src="assets/images/vip.png" alt="vip" class="defaultImg">
-                        <img src="assets/images/vip-hover.png" alt="vip-hover" class="hoverImg">
-                    </th>
-                    <th class="filter pointer"> <p>ОЧАКВАЙТЕ СКОРО</p></th>
-                </tr>
-                </table>
-            </div>
+                    <table id="tableNav">
+                        <tr class="trBorderBottom">
+                            <th class="filter pointer" id="firstMarked">
+                                <p>ВСИЧКИ ФИЛМИ</p>
+                            </th>
+                            <th class="filter pointer">
+                                <p>ДЕТСКИ ФИЛМИ</p>
+                            </th>
+                            <th class="filter pointer ">
+                                <img class="defaultImg" src="assets/images/imax.png" alt="imax">
+                                <img class='hoverImg' src="assets/images/imax-hover.png" alt="imax-hover">
+                            </th>
+                            <th class="filter pointer">
+                                <img src="assets/images/premium.png" alt="premium" class="defaultImg">
+                                <img src="assets/images/premium-hover.png" alt="premium-hover" class="hoverImg">
+                            </th>
+                            <th class="filter pointer">
+                                <img src="assets/images/luxe.png" alt="luxe" class="defaultImg">
+                                <img src="assets/images/luxe-hover.png" alt="luxe-hover" class="hoverImg">
+                            </th>
+                            <th class="filter pointer">
+                                <img src="assets/images/vip.png" alt="vip" class="defaultImg">
+                                <img src="assets/images/vip-hover.png" alt="vip-hover" class="hoverImg">
+                            </th>
+                            <th class="filter pointer">
+                                <p>ОЧАКВАЙТЕ СКОРО</p>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
                 <div class='arrow' id='twoArrow' tabindex="0"><img src="assets/images/red_arrow.png" alt=""></div>
             </div>
 
@@ -379,7 +401,8 @@
                             <div class='roller' id='one'>
                                 <h4><a href='#'>СПЕЧЕЛИ НАГРАДИ</a></h4>
                                 <div>
-                                    <img src="assets/images/promotionsSlides/thumb_10288_promotions_listing.jpeg" alt="Film Off">
+                                    <img src="assets/images/promotionsSlides/thumb_10288_promotions_listing.jpeg"
+                                        alt="Film Off">
                                 </div>
                                 <h5><a href="#">СУПЕР НАГРАДИ</a></h5>
                                 <div>
@@ -392,7 +415,8 @@
                             <div class='roller' id='two'>
                                 <h4><a href='#'>ПРОМОЦИИ И ОФЕРТИ</a></h4>
                                 <div>
-                                    <img src="assets/images/promotionsSlides/thumb_10296_promotions_listing.jpeg" alt="Film Off">
+                                    <img src="assets/images/promotionsSlides/thumb_10296_promotions_listing.jpeg"
+                                        alt="Film Off">
                                 </div>
                                 <h5><a href="#">FILM-OFF</a></h5>
                                 <div>
@@ -405,7 +429,8 @@
                             <div class='roller' id='three'>
                                 <h4><a href='#'>ПРОМОЦИИ И ОФЕРТИ</a></h4>
                                 <div>
-                                    <img src="assets/images/promotionsSlides/thumb_10192_promotions_listing.jpeg" alt="Film Off">
+                                    <img src="assets/images/promotionsSlides/thumb_10192_promotions_listing.jpeg"
+                                        alt="Film Off">
                                 </div>
                                 <h5><a href="#">НАЙ-ДОБРИТЕ САУНДТРАЦИ НА ГОДИНАТА НА СПЕЦИАЛНИ ЦЕНИ</a></h5>
                                 <div>
@@ -426,7 +451,8 @@
                             <div class='roller' id='one'>
                                 <h4><a href='#'>СПЕЧЕЛИ НАГРАДИ</a></h4>
                                 <div>
-                                    <img src="assets/images/promotionsSlides/thumb_10397_news_listing.jpeg" alt="Film Off">
+                                    <img src="assets/images/promotionsSlides/thumb_10397_news_listing.jpeg"
+                                        alt="Film Off">
                                 </div>
                                 <h5><a href="#">СУПЕР НАГРАДИ</a></h5>
                                 <div>
@@ -439,7 +465,8 @@
                             <div class='roller' id='two'>
                                 <h4><a href='#'>ПРОМОЦИИ И ОФЕРТИ</a></h4>
                                 <div>
-                                    <img src="assets/images/promotionsSlides/thumb_10391_news_listing.jpeg" alt="Film Off">
+                                    <img src="assets/images/promotionsSlides/thumb_10391_news_listing.jpeg"
+                                        alt="Film Off">
                                 </div>
                                 <h5><a href="#">FILM-OFF</a></h5>
                                 <div>
@@ -452,7 +479,8 @@
                             <div class='roller' id='three'>
                                 <h4><a href='#'>ПРОМОЦИИ И ОФЕРТИ</a></h4>
                                 <div>
-                                    <img src="assets/images/promotionsSlides/thumb_10387_news_listing.jpeg" alt="Film Off">
+                                    <img src="assets/images/promotionsSlides/thumb_10387_news_listing.jpeg"
+                                        alt="Film Off">
                                 </div>
                                 <h5><a href="#">НАЙ-ДОБРИТЕ САУНДТРАЦИ НА ГОДИНАТА НА СПЕЦИАЛНИ ЦЕНИ</a></h5>
                                 <div>
@@ -477,7 +505,8 @@
                         <div class='roller' id='one3'>
                             <h4><a href='#'>СПЕЧЕЛИ НАГРАДИ</a></h4>
                             <div>
-                                <img src="assets/images/promotionsSlides/thumb_10288_promotions_listing.jpeg" alt="Film Off">
+                                <img src="assets/images/promotionsSlides/thumb_10288_promotions_listing.jpeg"
+                                    alt="Film Off">
                             </div>
                             <h5><a href="#">СУПЕР НАГРАДИ</a></h5>
                             <div>
@@ -490,7 +519,8 @@
                         <div class='roller' id='two3'>
                             <h4><a href='#'>ПРОМОЦИИ И ОФЕРТИ</a></h4>
                             <div>
-                                <img src="assets/images/promotionsSlides/thumb_10296_promotions_listing.jpeg" alt="Film Off">
+                                <img src="assets/images/promotionsSlides/thumb_10296_promotions_listing.jpeg"
+                                    alt="Film Off">
                             </div>
                             <h5><a href="#">FILM-OFF</a></h5>
                             <div>
@@ -531,9 +561,11 @@
                         js.src = 'https://connect.facebook.net/bg_BG/sdk.js#xfbml=1&version=v3.2';
                         fjs.parentNode.insertBefore(js, fjs);
                     }(document, 'script', 'facebook-jssdk'));</script>
-                <div class="fb-page" data-href="https://www.facebook.com/KinoArena/" data-width="500" data-small-header="false"
-                    data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                    <blockquote cite="https://www.facebook.com/KinoArena/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/KinoArena/">Kino
+                <div class="fb-page" data-href="https://www.facebook.com/KinoArena/" data-width="500"
+                    data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+                    data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/KinoArena/" class="fb-xfbml-parse-ignore"><a
+                            href="https://www.facebook.com/KinoArena/">Kino
                             Arena</a></blockquote>
                 </div>
                 <div id="bottom-footer">
@@ -549,14 +581,17 @@
                     </p>
                 </div>
             </div>
-         </footer>   
+        </footer>
     </div>
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     </div>
     <img class="fly" id='nacho1' src="assets/images/nacho_1.png" alt="">
@@ -573,7 +608,7 @@
 
 </body>
 <script src="scripts/flyingPopcorns.js"></script>
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
+
 <script src="scripts/flyingPopcorns.js"></script>
 <script src="scripts/afishBoxes.js"></script>
 <script src="scripts/filterNav.js"></script>
