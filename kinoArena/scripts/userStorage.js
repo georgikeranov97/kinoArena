@@ -18,7 +18,8 @@ var userStorage = (function () {
         }
         
     }
-    let userList = []
+
+    let userList = [];
     if (localStorage.getItem('userList') !== null) {
         userList = JSON.parse(localStorage.getItem('userList'));
     } else {
@@ -26,11 +27,32 @@ var userStorage = (function () {
             new User('Gosho', 'Goshev', 'gosho@user.com', '123456')
         ];
     }
+
+    // if (sessionStorage.getItem('currentUser') !== null) {
+    //     currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    // } else {
+    //     var currentUser = null;
+    // }
+
     return {
         login: function (email, password) {
             return userList.find(user => user.email === email && user.password === password);
+            // var loginUser = userList.find(user => user.email === email && user.password === password);
+            // if(loginUser){
+            //     currentUser = loginUser;
+            //     sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
+            //     return true;
+            // }else{
+            //     return false;
+            // }
         },
-
+        // getCurrentUser: function(){
+        //     return currentUser
+        // },
+        // logOut: function() {
+        //     currentUser = null;
+        //     sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
+        // },
         register: function (fName, lName, email, password) {
             userList.push(new User(fName, lName, email, password));
             localStorage.setItem('userList', JSON.stringify(userList));

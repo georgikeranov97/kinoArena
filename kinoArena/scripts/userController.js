@@ -72,12 +72,6 @@
 
 // });
 
-// function isEmailValid(email) {
-//     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//     return re.test(String(email).toLowerCase());
-// }
-
-
 // $('.enterButton > button').on('click', function (event) {
 //     event.preventDefault();
 
@@ -98,7 +92,7 @@ function userController() {
 
         $('#newRegister > button').on('click', function (event) {
             event.preventDefault();
-            $('.justRegister').css('dispaly', 'block')
+            $('.justRegister').css('display', 'block')
             $('.justLogin').css('display', 'none');
         });
 
@@ -110,6 +104,8 @@ function userController() {
 
             if (userStorage.login(email, password)) {
                 $('.justLogin').css('display', 'none');
+                location.replace('#page=home');
+                $('#loginPage').text('ИЗХОД');
             } else {
                 $('#email').css('border-color', 'rgb(185, 9, 9)');
                 $('#password').css('border-color', 'rgb(185, 9, 9)');
@@ -156,6 +152,25 @@ function userController() {
             } else {
                 $('.repeatPasswordContainer > .error').text('');
             }
+            
+            if(!($('#checkbox1').is(':checked'))) {
+                hasErrors = true;
+                $('.checkbox > .error').text('You must check this!');
+            }else{
+                $('.checkbox > .error').text('');
+            }
+            if(!($('#checkbox2').is(':checked'))) {
+                hasErrors = true;
+                $('.checkbox > .error').text('You must check this!');
+            }else{
+                $('.checkbox > .error').text('');
+            }
+            if(!($('#checkbox3').is(':checked'))) {
+                hasErrors = true;
+                $('.checkbox > .error').text('You must check this!');
+            }else{
+                $('.checkbox > .error').text('');
+            }
 
             if (!hasErrors) {
                 userStorage.register(firstName, lastName, email, password);
@@ -167,3 +182,7 @@ function userController() {
     console.log('login');
 }
 
+function isEmailValid(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
