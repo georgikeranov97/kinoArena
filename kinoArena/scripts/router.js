@@ -5,6 +5,7 @@ function router() {
         case 'home' : homeController(); break;
         case 'login' : userController();break;
         case 'cinemas' : cinemasController(); break;
+        case 'program' : programController(); break;
 
         default: homeController();
     }

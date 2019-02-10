@@ -4,12 +4,12 @@
     font-weight: bold;
     margin-top: 5.5em;
 }
-#headingCinemas{
+#headingPrograma{
     display: flex;
     justify-content: center;
     margin-bottom: 45px;
 }
-#kinaZaglavie{
+#programaZaglavie{
     font-size: 2em;
     text-align: bold;
     margin-top: 20px;
