@@ -1,0 +1,16 @@
+#izbereteKino{
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 5.5em;
+}
+#headingCinemas{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 45px;
+}
+#kinaZaglavie{
+    font-size: 2em;
+    text-align: bold;
+    margin-top: 20px;
+}

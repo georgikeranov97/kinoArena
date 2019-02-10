@@ -4,7 +4,7 @@ function router() {
     switch (page) {
         case 'home' : homeController(); break;
         case 'login' : userController();break;
-        
+        case 'cinemas' : cinemasController(); break;
 
         default: homeController();
     }
