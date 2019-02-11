@@ -1,7 +1,7 @@
 function router() {
     const page = location.hash.split("=")[1];
     
-    if (page.includes('details')){
+    if (page && page.includes('details')){
         console.log(page)
         var id = page.split('/')[1]
         console.log(id)
@@ -13,13 +13,11 @@ function router() {
             case 'login' : userController();break;
             case 'cinemas' : cinemasController(); break;
             case 'program' : programController(); break;
+            case 'profile' : profileController(); break;
     
     default: homeController();
     }
     
-
-
-   
 }
 
 $(window).on('hashchange', router);

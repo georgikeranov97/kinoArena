@@ -1,4 +1,3 @@
-var kina = []
 var cinemasStorage = (function() {
     class Cinema{
         constructor(name,picture,adress){
@@ -10,8 +9,8 @@ var cinemasStorage = (function() {
         showInDOM(){
             return `<a href="#" >
             <img style="border: 7px solid #888; border-radius: 2px" class="snimkaNaKinoto" src="${this.picture}" alt="cinema picture"></a>
-            <p style="color: #fff;" class ="imeNaKInoto"> ${this.name}</p>
-            <p style="color: #fff; class="adress">${this.adress}</p>
+            <p style="color: #fff; font-weight: bold" class ="imeNaKInoto"> ${this.name}</p>
+            <p style="color: #fff; font-weight: bold; class="adress">${this.adress}</p>
             `;
         }
     }
@@ -26,6 +25,7 @@ var cinemasStorage = (function() {
                 kina.forEach(kino => {
                 var div = document.createElement('div');
                 div.style.display = 'inline-block';
+                div.style.width = '28%';
                 div.style.textAlign = 'center';
                 div.style.marginLeft = '40px';
                 div.innerHTML = kino.showInDOM();

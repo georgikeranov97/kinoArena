@@ -18,7 +18,7 @@ var userStorage = (function () {
         }
         
     }
-
+    var currentUser = null;
     let userList = [];
     if (localStorage.getItem('userList') !== null) {
         userList = JSON.parse(localStorage.getItem('userList'));
@@ -29,40 +29,46 @@ var userStorage = (function () {
         ];
     }
 
-    if (sessionStorage.getItem('currentUser') !== null) {
-        currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    } else {
-        var currentUser = null;
-    }
+    // if (sessionStorage.getItem('currentUser') !== null) {
+    //     currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    // } else {
+        
+    // }
 
     return {
         login: function (email, password) {
             // return userList.find(user => user.email === email && user.password === password);
-            var loginUser = userList.find(user => user.email === email && user.password === password);
+            var loginUser = $(userList).find(user => user.email === email && user.password === password);
             if(loginUser){
+                sessionStorage.setItem('userList', JSON.stringify(loginUser));
                 currentUser = loginUser;
-                sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
-                return true;
+                return loginUser;
             }else{
-                return false;
+                return null;
             }
         },
         getCurrentUser: function(){
-            return currentUser
+            return currentUser;
         },
-        // logOut: function() {
-        //     currentUser = null;
-        //     sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
-        // },
+        logOut: function() {
+            currentUser = null;
+            sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
+        },
         register: function (fName, lName, email, password) {
             userList.push(new User(fName, lName, email, password));
             localStorage.setItem('userList', JSON.stringify(userList));
         },
+        addFavoriteMovie: (movieTitle) => {
+            const movie = getMovieByName(movieTitle);
+            currentUser.favourites.push(movie);
+            localStorage.setItem('userList', JSON.stringify(userList));
+            return movie;
+        },
         getFavourites: function(){
-            return this.favourites
+            return favourites;
         },
         getTickets: function(){
-            return this.tickets
+            return tickets;
         }
     }
 })();
