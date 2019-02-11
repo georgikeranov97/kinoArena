@@ -1,0 +1,28 @@
+#logOutButton{
+    background-color: #111;
+    color: #fff;
+    border-radius: 5%;
+    padding: 15px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    font-stretch: condensed;
+    width: 25%;
+    margin-bottom: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+#logOutButton:hover{
+    background-color: #555;
+    transition: 0.4s;
+}
+#ticketsHeading{
+    color: #fff;
+    text-align: center;
+}
+#logOutButtonContainer{
+    display: flex;
+    justify-content: center;
+}

@@ -1,3 +1,4 @@
+
 var id = 0;
 
 class Afish{
@@ -18,10 +19,10 @@ class Afish{
     this.isConcert=isConcert;
     this.kina=kina;
     }
- 
+
     showInDOM(){
-       
-       return `
+    
+    return `
         <div class="afish">
             <div class="InnerAfish" id=${this.id}>
                 <a href="${this.trailerLink}" class="trailer">
@@ -63,7 +64,7 @@ class Afish{
         
     }
     showInDOMSmall(){
-       return `
+    return `
         <div class="afish2">
             <div class="InnerAfish2" id=${this.id}>
                 <a href="${this.trailerLink}" class="trailer2">
@@ -126,4 +127,8 @@ var queen =new Afish('БОХЕМСКА РАПСОДИЯ','assets/images/queen.jp
 
 
 var allMovies = [lion,dragon,despicable,beauty,queen]
+
+function getMovieByName(movieTitle) {
+    return allMovies.find(movie => movie.title === movieTitle);
+}
 

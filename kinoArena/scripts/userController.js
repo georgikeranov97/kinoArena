@@ -105,7 +105,11 @@ function userController() {
             if (userStorage.login(email, password)) {
                 $('.justLogin').css('display', 'none');
                 location.replace('#page=home');
-                $('#loginPage').text('ИЗХОД');
+                $('#loginPage').text('ПРОФИЛ');
+                $('#loginPage').attr('href', '#page=profile');
+                $.get('profile.htm').then(text => {
+                    $('main').html(text);
+                })
               
             } else {
                 $('#email').css('border-color', 'rgb(185, 9, 9)');

@@ -3,6 +3,10 @@ function router() {
     const page = location.hash.split("=")[1];
     
     if (page && page.includes('details')){
+<<<<<<< HEAD
+=======
+        console.log(page)
+>>>>>>> refs/remotes/origin/master
         var id = page.split('/')[1]
         detailController(id);
         return;
@@ -21,14 +25,15 @@ function router() {
             case 'login' : userController();break;
             case 'cinemas' : cinemasController(); break;
             case 'program' : programController(); break;
+<<<<<<< HEAD
             // case 'lubimi' : lubimiController();break;
+=======
+            case 'profile' : profileController(); break;
+>>>>>>> refs/remotes/origin/master
     
     default: homeController();
     }
     
-
-
-   
 }
 
 $(window).on('hashchange', router);
