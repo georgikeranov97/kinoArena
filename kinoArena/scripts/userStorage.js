@@ -42,7 +42,13 @@ var userStorage = (function () {
             if(loginUser){
                 sessionStorage.setItem('userList', JSON.stringify(loginUser));
                 currentUser = loginUser;
+<<<<<<< HEAD
                 return loginUser;
+=======
+                
+                sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
+                return true;
+>>>>>>> 0cc51a7cd0add3e583b8d3e1dc2c28f085e356cf
             }else{
                 return null;
             }
