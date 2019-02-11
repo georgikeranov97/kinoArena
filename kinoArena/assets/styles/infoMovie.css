@@ -1,7 +1,9 @@
 #wrapperFilm{
     width:50em;
-    border: 2px solid blue;
-    color:white
+    /* border: 2px solid blue; */
+    color:white;
+    margin: 0 auto;
+    
 }
 
 #headerFilm{
@@ -9,7 +11,7 @@
 justify-content: space-around;
 box-sizing: border-box;
 margin: 0em 1em;
-border: 1px solid red;
+/* border: 1px solid red; */
 }
 #wrapperFilm article{
     display:flex;
@@ -26,7 +28,16 @@ font-size: 1.2em;
 }
 #posterNaFilma{
     width:10em;
+    margin: 1em 3em;
 }
 #posterNaFilma img{
     max-width: 100%;
+}
+.infoZaFilma {
+    display: flex;
+    box-sizing: border-box;
+    width: 30em;
+    padding: 1em;
+    text-overflow: ellipsis;
+    font-size:1.2em
 }

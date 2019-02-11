@@ -38,3 +38,8 @@ margin: 2.3125em 0;
     left: 17.5em;
     z-index: 5;
 }
+.advertising {
+    display: flex;
+    justify-content: space-between;
+    margin: 5em;
+}

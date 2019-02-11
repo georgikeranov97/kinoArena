@@ -13,7 +13,11 @@
 .banner{
     display: flex;
 }
-.banner >a{
+.middleBanner img{
+    height: 100%;
+}
+
+.banner a{
     display: flex;
     margin: 80px auto;
 }
@@ -31,4 +35,4 @@
 /* .radio input[type='radio'] {
     display: none;
     /*removes original button*/
-  } */
+  /* } */ 

@@ -52,14 +52,25 @@
 #screenBox{
     flex: 3;
 } */
-
-#one, #two, #three{
+/* 
+.rowseats{
     position: relative;
     top: -46px;
     left: -4px;
-}
+} */
 #ekran > p{
     text-align: center;
+}
+#ekran > img{
+position: relative;
+left: -3em;
+}
+#izborNaMesta{
+    padding-top: 8em;
+}
+.rowseats >span {
+    position: relative;
+    top: -2.7em;
 }
 /* Customize the label (the container) */
 .container {

@@ -9,15 +9,20 @@ document.addEventListener("DOMContentLoaded", function() {
     var popcorn6 = document.getElementById('popcorn6')
     var flyingStars = document.getElementById('starSky')
     
-    nacho1.style.top= 767+'px';
-    nacho2.style.top= 887+'px';
-    popcorn1.style.top = 833 + 'px';
-    popcorn2.style.top = 1000 + 'px';
-    popcorn3.style.top = 1000 +'px';
-    popcorn4.style.top = 691 + 'px';
-    popcorn5.style.top = 1059 + 'px';
-    popcorn6.style.top = 1128 + 'px';
-    flyingStars.style.top = 300 + 'px'
+    // nacho1.style.top= 767+'px';
+    
+    popcorn1.style.top = 100 + 'px';
+    nacho1.style.top= 200+'px'
+    nacho2.style.top= 280+'px';
+  
+    popcorn2.style.top = 320 + 'px';
+    
+    popcorn4.style.top = 480 + 'px';
+    
+    popcorn3.style.top = 560 +'px';
+    popcorn5.style.top = 350 + 'px';
+    popcorn6.style.top = 80 + 'px';
+    flyingStars.style.top = 400 + 'px'
     
     var flyingElements = [nacho1, nacho2, popcorn1, popcorn2, popcorn3, popcorn4, popcorn5, popcorn6]
     
@@ -26,10 +31,12 @@ document.addEventListener("DOMContentLoaded", function() {
         if(imaLi){return}
         imaLi=true;
         let num=window.pageYOffset;
+        console.log(num)
+        
         if (num>lastNum ){
             id=setInterval(()=>moveDown(flyingElements),30)
             id2=setInterval(()=>moveSkyUp(flyingStars),30)
-    
+        
         }else{
            id=setInterval(()=>moveUp(flyingElements),30)
            id2=setInterval(()=>moveSkyDown(flyingStars),30)

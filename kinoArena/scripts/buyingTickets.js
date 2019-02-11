@@ -16,7 +16,6 @@ class Ticket {
 }
 
 var allTicketets = [];
-
 /// pri chekvane vednaga da pokaje kolko broq butona sa cheknati - kolko bileta sa izbrani
 function updateTextArea() {
   var allVals = 0;
@@ -27,7 +26,7 @@ function updateTextArea() {
       allVals += +v
     }
   });
-  $('#bileti').text('Izbrahte ' + allVals + ' broq bileti');
+  $('#bileti').text('Избрахте ' + allVals + ' бр. билети');
 }
 // pri smqna na statusa na chek-box-a da pokaje kolko bileta sa izbrani
 $('input[type="checkbox"]').change(updateTextArea);
@@ -54,19 +53,27 @@ $('input[type="checkbox"]').change(function () {
   } else {
     // pri izbor na  check box, shte pravi nov obekt bilet
     // pri povtorna promqna na check boksa, shte tyrsi v biletite i ako veche ima takyw - shte go iztrie ot ekrana
-    var newTicket = new Ticket(red, sedalka);
-    allTicketets.push(newTicket)
+
 
     var p = document.createElement('p')
     p.id = `${newTicket.numberTicket}`;
-    p.innerHTML = `ред ${red} еди кой си, място :${sedalka}`
+    p.innerHTML = `Ред: ${red} , място :${sedalka}`
    
     document.getElementById('zakupuvane').appendChild(p)
 
   }
-  var broi = allTicketets.length;
-  var suma = broi * TICKETS_PRICE;
-  $('#suma').text('Obshta dyljima suma:' + suma);
+  broi = allTicketets.length;
+  suma = broi * TICKETS_PRICE;
+  $('#suma').text('Обща дължима сума:' + suma);
+  
+  var button = $('#suma');
+  button.addEventListener('click',(event)=>{
+    event.preventDefault();
+    var newTicket = new Ticket(red, sedalka);
+    allTicketets.push(newTicket)
+    
+  })
+  
 })
 
 
