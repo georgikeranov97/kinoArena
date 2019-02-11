@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     
-
+    <link rel="stylesheet" href="assets/styles/infoMovie.css">
     <link rel="stylesheet" href="assets/styles/chooseCinemaMovie.css">
     <link rel="stylesheet" href="assets/styles/mainStyle2.css">
     <link rel="stylesheet" href="assets/styles/filterNav.css">
@@ -24,9 +24,13 @@
     <link rel="stylesheet" href="assets/styles/cinemas.css">
     <link rel="stylesheet" href="assets/styles/program.css">
     
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="scripts/userStorage.js"></script>
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="scripts/cinemasStorage.js"></script>
+    <script src="scripts/movieStorage.js"></script>
+    <script src="scripts/userStorage.js"></script>
+
+    <script src="scripts/detailController.js"></script>
     <script src="scripts/userController.js"></script>
     <script src="scripts/homeController.js"></script>
     <script src="scripts/programController.js"></script>
@@ -298,7 +302,9 @@
                     </li>
                 </ul>
             </nav>
-            <img src="assets/images/logo.png" alt="logo" id="logo">
+            <a href="#page=home">
+                <img src="assets/images/logo.png" alt="logo" id="logo">
+            </a>
             <nav id="right-nav">
                 <ul>
                     <li><a href="#page=cinemas">КИНА</a></li>
@@ -422,6 +428,26 @@
     <img class="fly" id='starSky' src="assets/images/Star-PNG-Pic (1).png" alt="">
   
     <script src="scripts/flyingPopcorns.js"></script>
+    <script id="detail_movie" type="text/x-handlebars-template">
+
+        <div id ='wrapperFilm'> 
+            <section>
+                <header id = 'headerFilm'>
+                    <h1>{{this.title}}</h1>
+                    <button>Dobavi v liubimi</button>
+                </header>
+                <article>
+                    <figure id="posterNaFilma">
+                        <img src='{{this.poster}}' alt="movie poster">
+                    </figure>
+                    <div class="infoZaFilma">
+                        <p>{{this.moreLink}}</p>
+                    </div>
+                </article>
+            </section>
+        
+        </div>
+        </script>
 </body>
 
 </html>

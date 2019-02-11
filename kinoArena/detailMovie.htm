@@ -1,0 +1,17 @@
+
+<div id='etoTovaShteE'>
+
+</div>
+<script>
+const pageArr = location.hash.split("/");
+const idmovie = +pageArr[pageArr.length-1]
+    console.log('do tuk ne stiga')
+    console.log(allMovies)
+    var movie = allMovies.find(m=>m.id === idmovie);
+
+    console.log(movie)
+    var templateString = document.getElementById('detail_movie').innerHTML;
+    var template = Handlebars.compile(templateString);
+    var html=template(movie);
+    document.getElementById('etoTovaShteE').innerHTML=html;
+// </script>

@@ -101,11 +101,12 @@ function userController() {
 
             const email = $('#email').val();
             const password = $('#password').val();
-
+            
             if (userStorage.login(email, password)) {
                 $('.justLogin').css('display', 'none');
                 location.replace('#page=home');
                 $('#loginPage').text('ИЗХОД');
+              
             } else {
                 $('#email').css('border-color', 'rgb(185, 9, 9)');
                 $('#password').css('border-color', 'rgb(185, 9, 9)');

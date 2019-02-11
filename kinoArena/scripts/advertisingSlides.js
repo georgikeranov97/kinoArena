@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+var izvikaiSlides = function() {
     var radio1 = document.querySelector('#radioOne')
     var radio2 = document.querySelector('#radioTwo')
     var radio3 = document.getElementById('radioThree')
@@ -239,4 +239,4 @@ var id;
     }
 
 
-})
+}

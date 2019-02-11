@@ -1,5 +1,5 @@
+var kina = []
 var cinemasStorage = (function() {
-    var nomerNaKinoto=0;
     class Cinema{
         constructor(name,picture,adress){
             this.name=name;
@@ -15,7 +15,7 @@ var cinemasStorage = (function() {
             `;
         }
     }
-    var kina =[
+    kina =[
         new Cinema('Арена Запад ','assets/images/kino_zapad.jpeg','бул. „Тодор Александров“ 64, 1309 ж.к. Илинден, София'),
         new Cinema('Арена Младост ','assets/images/kino_mladost.jpeg','ул. „Бизнес парк София“ 3, 1766 ж.к. Младост 4, София'),
         new Cinema('Aрена Арена Делукс ','assets/images/kino_bulgaria.jpeg',' бул. „България“ 69, 1404 кв. Манастирски ливади, София' )

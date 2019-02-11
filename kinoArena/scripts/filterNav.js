@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+var izvikaiFilterNav = function() {
 
 var vsichki = document.querySelectorAll('.filter');
 Array.prototype.forEach.call(vsichki, vsqko =>{
@@ -99,4 +99,4 @@ vsichki[5].addEventListener('click',()=>{
 }) 
 
 
-})
+}

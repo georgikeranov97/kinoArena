@@ -36,7 +36,9 @@ $('input[type="checkbox"]').change(function () {
   var containerSeats = $('#zakupuvane');
   var input = $(this);
   var sedalka = $(input).attr('name');
+  console.log(sedalka)
   var red = input.closest('div').attr('id');
+  console.log(red)
 
   //tyrsim dali ima veche vednyj natisnata, takava sedalka,zashtoto ako ima povtornoto natiskane e otkaz
   //  var choosenSeat = allTicketets.filter(t=> t.numberSeat===sedalka && t.row===red)
@@ -58,7 +60,8 @@ $('input[type="checkbox"]').change(function () {
     var p = document.createElement('p')
     p.id = `${newTicket.numberTicket}`;
     p.innerHTML = `ред ${red} еди кой си, място :${sedalka}`
-    containerSeats.appendChild(p);
+   
+    document.getElementById('zakupuvane').appendChild(p)
 
   }
   var broi = allTicketets.length;
