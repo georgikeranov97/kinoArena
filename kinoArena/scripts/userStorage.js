@@ -41,6 +41,7 @@ var userStorage = (function () {
             var loginUser = userList.find(user => user.email === email && user.password === password);
             if(loginUser){
                 currentUser = loginUser;
+                
                 sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
                 return true;
             }else{

@@ -226,3 +226,8 @@ flex:4;
 .LanguageAge2{
 flex:1
 }
+.LanguageAge img{
+    position: relative;
+    padding:0px;
+    margin:0px;
+}
