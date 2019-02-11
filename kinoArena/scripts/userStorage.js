@@ -11,7 +11,8 @@ var userStorage = (function () {
             // this.repeatPassword = repeatPassword;
         }
         buyTicket(ticket){
-            this.tickets.push(ticket)
+            ticket.forEach(t=>this.tickets.push(t) )
+            
         }
         addToFavourites(movie){
             this.favourites.push(movie)

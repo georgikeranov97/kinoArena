@@ -33,7 +33,7 @@ font-size: 1.2em;
 #posterNaFilma img{
     max-width: 100%;
 }
-.infoZaFilma {
+.infoZaFilm {
     display: flex;
     box-sizing: border-box;
     width: 30em;

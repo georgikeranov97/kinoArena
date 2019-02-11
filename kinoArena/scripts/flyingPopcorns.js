@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if(imaLi){return}
         imaLi=true;
         let num=window.pageYOffset;
-        console.log(num)
+    
         
         if (num>lastNum ){
             id=setInterval(()=>moveDown(flyingElements),30)

@@ -4,6 +4,9 @@ function detailController(id){
 $.get('detailMovie.htm').then( text=> {
         $('main').html(text);
     })
+
+    
+    
 }
 //     var movie = allMovies.find(m=>m.id === id);
 //     var templateString = document.getElementById('detail_movie').innerHTML;

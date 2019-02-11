@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     
+    <link rel="stylesheet" href="assets/styles/buyingTickets.css">
     <link rel="stylesheet" href="assets/styles/infoMovie.css">
     <link rel="stylesheet" href="assets/styles/chooseCinemaMovie.css">
     <link rel="stylesheet" href="assets/styles/mainStyle2.css">
@@ -26,10 +27,16 @@
     
     <script src="../../node_modules/jquery/dist/jquery.js"></script>
     <script src="../../node_modules/handlebars/dist/handlebars.min.js"></script>
+    
+    
+    
+    <script src="scripts/ticketStorage.js"></script>
+    <script src="scripts/userStorage.js"></script>
     <script src="scripts/cinemasStorage.js"></script>
     <script src="scripts/movieStorage.js"></script>
-    <script src="scripts/userStorage.js"></script>
-
+    
+    <script src="scripts/buyTicketsController.js"></script>
+    <script src="scripts/detailMovie.js"></script>
     <script src="scripts/detailController.js"></script>
     <script src="scripts/userController.js"></script>
     <script src="scripts/homeController.js"></script>
@@ -39,6 +46,7 @@
     <script src="scripts/afishBoxes.js"></script>
     <script src="scripts/filterNav.js"></script>
     <script src="scripts/advertisingSlides.js"></script>
+   
 
 
     <style>
@@ -435,13 +443,13 @@
             <section>
                 <header id = 'headerFilm'>
                     <h1>{{this.title}}</h1>
-                    <button>Dobavi v liubimi</button>
+                    <button>ДОБАВИ В ЛЮБИМИ</button><button id="buyTicket">КУПИ БИЛЕТ</button>
                 </header>
                 <article>
                     <figure id="posterNaFilma">
                         <img src='{{this.poster}}' alt="movie poster">
                     </figure>
-                    <div class="infoZaFilma">
+                    <div class="infoZaFilm">
                         <p>{{this.moreLink}}</p>
                     </div>
                 </article>
@@ -449,7 +457,7 @@
         
         </div>
         </script>
-        
+       
 </body>
-
+<!-- <script src="scripts/buyingTickets.js"></script> -->
 </html>

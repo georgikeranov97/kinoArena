@@ -36,7 +36,7 @@ class Afish{
                     <p>ПОДРОБНО</p>
                     </span>
                 </a>
-                <a href="#"  class="liubimi">
+                <a href="#page=lubimi" id="liubimi" class="liubimi">
                     <span>
                         <i class="fas fa-heart"></i>
                         <p>ДОБАВИ В ЛЮБИМИ</p>
@@ -72,7 +72,7 @@ class Afish{
                         <p>ТРЕЙЛЪР</p>
                     </span>
                 </a>
-                <a href="${this.moreLink}"  class="podrobno2"> 
+                <a id="${this.id}" href="#page=details/${this.id}"   class="podrobno2"> 
                     <span>
                         <i class="fas fa-star2"></i>
                     <p>ПОДРОБНО</p>
