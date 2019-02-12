@@ -1,34 +1,7 @@
 
-  var manageBuying=function(){
-  // console.log('ama hich ne stava nishto!')
-  var masivPage = location.hash.split("/");
-  
-  var idfilm = + masivPage[masivPage.length-1]
-  
-  var filmche = allMovies.find(m => m.id == idfilm);
-  console.log(filmche.title)
-  //kogato nqkoi e lognat tova shte e currentUser
-  var currentUser = userStorage.getCurrentUser();
-  
-  
-  // kina.forEach(k=>{
-  //   $('<option>').val(k.name).appendTo($('#selectCinema')).text(k.name)
-  // })
-  // var selectetCinema
-  // $('#selectCinema').on('change',function(){
-  //   selectetCinema=$('#selectCinema').val()
-  //   console.log('ти ебаваш ли се')
-  // })
-  
-  // $('#zaToziFilm').text(filmche.title)
-  
   var allTicketets = [];
   var newTicket;
-  window.addEventListener("DOMContentLoaded", function(){
-  (function(){
-    document.getElementById('zaToziFilm').innerText=filmche.title
-
-
+  var currentUser = userStorage.getCurrentUser()
     /// pri chekvane vednaga da pokaje kolko broq butona sa cheknati - kolko bileta sa izbrani
     function updateTextArea() {
       console.log('влиза в ъпдейт текст ареа')
@@ -97,8 +70,3 @@
         })
       
   })
-  
-  })()
-})
-
-}

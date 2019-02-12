@@ -41,3 +41,7 @@ font-size: 1.2em;
     text-overflow: ellipsis;
     font-size:1.2em
 }
+#trailerFrame{
+    left:15em;
+    position:relative;
+}

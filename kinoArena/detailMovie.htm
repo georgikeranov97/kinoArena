@@ -3,21 +3,38 @@
 
     </div>
 <div id='aToziZaBileti'></div>
+<p id='alert'></p>
+
     <script>
         (function(){
+            var currentUser= userStorage.getCurrentUser()
             const pageArr = location.hash.split("/");
             const idmovie = +pageArr[pageArr.length-1]
         console.log('do tuk ne stiga')
-        console.log(allMovies)
+        // console.log(allMovies)
         var movie = allMovies.find(m=>m.id === idmovie);
-        console.log(movie)
+        // console.log(movie)
         var templateString = document.getElementById('detail_movie').innerHTML;
         var template = Handlebars.compile(templateString);
         var html=template(movie);
         document.getElementById('etoTovaShteE').innerHTML=html;
+        document.getElementById('dobaviFavourites').addEventListener('click',function(){
+            if(!currentUser){
+                location.replace('#page=login')
+            }else{
+                //     if(!currentUser.proveriImaLiGo(movie)){
+                //     currentUser.addToFavourites(movie)
+                //     document.getElementById('alert').innerText('Добавихте този филм в любими')
+                //     }else{
+                //         document.getElementById('alert').innerText('Този филм е вече добавен!')
+                //     }
+                userStorage.addFavoriteMovie(movie)
+            }
+        })
         document.getElementById('buyTicket').addEventListener('click',function(){
             location.replace('#page=Buy/'+idmovie)
         })
         })()
+    
     
     // </script>

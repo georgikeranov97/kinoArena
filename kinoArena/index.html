@@ -275,7 +275,6 @@ main{
 .carousel{
     z-index: 10;
 }
-
     </style>
 </head>
 
@@ -426,10 +425,6 @@ main{
         </footer>
     </div>
 
-<<<<<<< HEAD
-=======
-   
->>>>>>> 0cc51a7cd0add3e583b8d3e1dc2c28f085e356cf
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
         integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
         crossorigin="anonymous"></script>
@@ -454,7 +449,7 @@ main{
             <section>
                 <header id = 'headerFilm'>
                     <h1>{{this.title}}</h1>
-                    <button>ДОБАВИ В ЛЮБИМИ</button><button id="buyTicket">КУПИ БИЛЕТ</button>
+                    <button id='dobaviFavourites'>ДОБАВИ В ЛЮБИМИ</button><button id="buyTicket">КУПИ БИЛЕТ</button>
                 </header>
                 <article>
                     <figure id="posterNaFilma">
@@ -465,10 +460,15 @@ main{
                     </div>
                 </article>
             </section>
+            <div id="trailerFrame">
+                    <iframe  width="560" height="315" src="{{this.trailerLink}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+            </div>
         
         </div>
         </script>
        
 </body>
-<!-- <script src="scripts/buyingTickets.js"></script> -->
+<script src="scripts/addingToFavouties.js"></script>
+
 </html>

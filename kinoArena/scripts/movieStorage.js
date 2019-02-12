@@ -25,7 +25,7 @@ class Afish{
     return `
         <div class="afish">
             <div class="InnerAfish" id=${this.id}>
-                <a href="${this.trailerLink}" class="trailer">
+                <a href="${this.trailerLink}" class="trailer popup">
                     <span>
                         <i class="fas fa-play-circle"></i>
                         <p>ТРЕЙЛЪР</p>
@@ -37,7 +37,7 @@ class Afish{
                     <p>ПОДРОБНО</p>
                     </span>
                 </a>
-                <a href="#page=lubimi" id="liubimi" class="liubimi">
+                <a href="" id="liubimi" class="liubimi">
                     <span>
                         <i class="fas fa-heart"></i>
                         <p>ДОБАВИ В ЛЮБИМИ</p>
@@ -117,8 +117,8 @@ var chasove2 = [
 ]
 var lk='Cимбa e млaдия нacлeдниĸ нa пpecтoлa, нo e тpън в oчитe нa aлчния cи чичo, ĸoйтo иcĸa дa cтaнe цap нa caвaнaтa. Cлeдвaт пopeдицa oт интpиги, c ĸoитo тoй ce дoĸoпвa дo пpecтoлa, a мaлĸoтo лъвчe ce пpинyждaвa дa нaпycнe poдинaтa cи. Toй cpeщa нoви пpиятeли, c ĸoитo пopacтвa и мy пoĸaзвaт ĸoй вcъщнocт e тoй - в poдинaтa cи имa дълг.'
 var d ='Невероятното приятелство, започнало между един подрастващ викинг и страховития дракон Нощен бяс, се превъръща в епична трилогия, завладяла живота и на двамата. В този епизод Хълцук и Беззъб най-накрая ще открият истинските си съдби: вождът на селото като владетел на Бърк заедно с Астрид и драконът – като лидер на своя вид. Борейки се с ежедневните предизвикателства, те се изправят пред най-тъмната заплаха, с която са се сблъсквали до сега. Тя, както и появата на женската Нощен бяс, ще поставят на изпитание връзката помежду им както никога досега.'
-var lion = new Afish('Car Luv','assets/images/lionKing.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#',lk,true,true,false,false,true,chasove1)
-var dragon = new Afish('How to train dragon','assets/images/poster_1.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#',d,false,true,true,true,false,chasove1)
+var lion = new Afish('Car Luv','assets/images/lionKing.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','https://www.youtube.com/embed/4CbLXeGSDxg',lk,true,true,false,false,true,chasove1)
+var dragon = new Afish('How to train dragon','assets/images/poster_1.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','https://www.youtube.com/embed/CQ7XUCQ6pbE',d,false,true,true,true,false,chasove1)
 var despicable = new Afish('Despicable me 3','assets/images/poster_2.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#','#',true,false,true,true,true,chasove2)
 var beauty = new Afish('Beauty and the Beast','assets/images/poster_3.jpg','assets/images/bezOgranichenq.png','assets/images/Dubliran.png','#','#',false,true,true,false,false,chasove2)
 var queen =new Afish('БОХЕМСКА РАПСОДИЯ','assets/images/queen.jpg','assets/images/bezOgranichenq.png','','#','#',false,true,true,false,false,chasove1)

@@ -9,13 +9,21 @@ var userStorage = (function () {
             this.tickets = [];
             this.favourites=[];
             // this.repeatPassword = repeatPassword;
-        }
-        buyTicket(ticket){
-            ticket.forEach(t=>this.tickets.push(t) )
+        // }
+        // buyTicket(ticket){
+        //     ticket.forEach(t=>this.tickets.push(t) )
             
-        }
-        addToFavourites(movie){
-            this.favourites.push(movie)
+        // }
+        // addToFavourites(movie){
+        //     this.favourites.push(movie)
+        // }
+        // proveriImaLiGo(movie){
+        //     var l = this.favourites.filter(m => m.id === movie.id)
+        //     if (l.length<1){ 
+        //         return false
+        //     }
+        //     return true;
+        // }
         }
         
     }
@@ -43,13 +51,9 @@ var userStorage = (function () {
             if(loginUser){
                 sessionStorage.setItem('userList', JSON.stringify(loginUser));
                 currentUser = loginUser;
-<<<<<<< HEAD
-                return loginUser;
-=======
                 
                 sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
                 return true;
->>>>>>> 0cc51a7cd0add3e583b8d3e1dc2c28f085e356cf
             }else{
                 return null;
             }
@@ -65,8 +69,10 @@ var userStorage = (function () {
             userList.push(new User(fName, lName, email, password));
             localStorage.setItem('userList', JSON.stringify(userList));
         },
-        addFavoriteMovie: (movieTitle) => {
-            const movie = getMovieByName(movieTitle);
+        addFavoriteMovie: (movie) => {
+            // console.log(currentUser.favourites)
+            // var l = currentUser.favourites.filter(m=> m.id === movie.id);
+            // if (l.length>0) return;
             currentUser.favourites.push(movie);
             localStorage.setItem('userList', JSON.stringify(userList));
             return movie;
