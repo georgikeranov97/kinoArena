@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Syzdavane na film</title>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <style>
+    form {
+    width: 28em;
+    margin: 5em auto;
+    box-sizing: border-box;
+    }
+    fieldset{
+        border: 1em solid gray;
+    border-radius: 2em
+    }
+    input[type=text]{
+    padding: 1em;
+    width: 80%;
+    font-size: 1em;
+    }
+    div {
+        align-content: center
+    }
+    .forText {
+        display: block;
+    margin: 0 auto;
+    padding: 0 1em;
+    }
+    div{
+        padding: 0.2em 0;
+    }
+    #syzdavane button{
+        border-radius: 1em;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5em 2em;
+    font-size: 1.2em;
+    }
+    #zaMladost{
+        
+    }
+    </style>
+</head>
+<body>
+    <form id ='syzdavane'action="">
+        <fieldset>
+            <div>
+                <input class = "forText" type="text" id="filmTitle" placeholder="Име на филма">
+            </div>
+            <div>
+                <input class = "forText" type="text" id="picture" placeholder="Адрес на постера на филма">
+            </div>    
+            <div>
+                <p>С Българско аудио ли е?</p>
+                <div>
+                    <label for="audio">Да</label>
+                    <input type="radio" name="audio" value="true">
+                </div>
+                <div>
+                    <label for="">Без </label>
+                    <input type="radio" name="audio" value="false">
+                </div>          
+            </div>
+            <div id="ogranichenie">
+                <p>Възрастово ограничение</p>
+                <div>
+                    <label for="ogranichenie">Забранено за деца</label>
+                    <input type="radio" name="restrictions" value="NoKids">
+                </div>
+                <div>
+                    <label for="">Забранено до 16 години</label>
+                    <input type="radio" name="restrictions" value="16">
+                </div>
+                <div>
+                    <label for="">Забранено до 12 години</label>
+                    <input type="radio" name="restrictions" value="12">
+                </div>
+                <div>
+                    <label for="">Без Ограничения</label>
+                    <input type="radio" name="restrictions" value="no">
+                </div>   
+            </div>
+            <div>
+                <input type="text" class = "forText" id="trailerLocation" placeholder="Линк към трейлъра">
+            </div>    
+            <div>
+                <textarea class = "forText" id ="povecheZaFilma" rows="4" cols="50" maxlength="50" placeholder="Кратко описание"></textarea>
+            </div>   
+            <div>
+                <p>Избрете следните от следните характеристики:</p>
+        
+                <div>
+                    <label for="harakteristiki">Детски</label>
+                    <input type="checkbox" id='forKids' name="forKids" value="true">    
+                </div>
+                <div>
+                   <label for="">IMAX</label>
+                   <input type="checkbox" name="IMAX" value="true">
+                </div>
+                <div>
+                    <label for="">Premium</label>
+                    <input type="checkbox" name="Premium" value="true">
+                </div>
+                <div>
+                    <label for="">LUXE</label>
+                    <input type="checkbox" name="LUXE" value="true">
+                </div>
+                <div>
+                    <label for="">VIP</label>
+                    <input type="checkbox" name="VIP" value="true">
+                </div>
+                <div>
+                    <label for="harakteristiki">Концерт или събитие</label>
+                    <input type="checkbox" name="concert" id="">
+                </div>
+                
+            </div>
+            <div>
+                <p>Изберете, кина в които ще се прожектира и часове за прожекции:</p>
+                <div>
+                        <label for="">Арена Младост</label>
+                        <input type="checkbox" name="zaMladost" id=""> 
+                        <div id="zaMladost">
+                                <p>Часове на прожекцията:</p>
+                                <label for="">10:00</label>
+                                <input type="checkbox" value="10:00" id="">
+                                <label for="">11:00</label>
+                                <input type="checkbox" value="11:00" id="">
+                                <label for="">13:00</label>
+                                <input type="checkbox" value="13:00" id="">
+                                <label for="">14:00</label>
+                                <input type="checkbox" value="14:00" id="">
+                                <label for="">15:00</label>
+                                <input type="checkbox" value="15:00" id="">
+                                <label for="">16:00</label>
+                                <input type="checkbox" value="16:00" id="">
+                                <label for="">17:00</label>
+                                <input type="checkbox" value="17:00" id="">
+                                <label for="">19:00</label>
+                                <input type="checkbox" value="19:00" id="">
+                                <label for="">20:00</label>
+                                <input type="checkbox" value="20:00" id="">
+                                <label for="">21:00</label>
+                                <input type="checkbox" value="21:00" id="">
+                            </div>   
+                </div>
+                <div>
+                        <label for="">Арена Запад</label>
+                        <input type="checkbox" name="zaZapad" id="">
+                        <div id="zaZapad">
+                                <p>Часове на прожекцията:</p>
+                                <label for="">10:00</label>
+                                <input type="checkbox" value="10:00" id="">
+                                <label for="">11:00</label>
+                                <input type="checkbox" value="11:00" id="">
+                                <label for="">13:00</label>
+                                <input type="checkbox" value="13:00" id="">
+                                <label for="">14:00</label>
+                                <input type="checkbox" value="14:00" id="">
+                                <label for="">15:00</label>
+                                <input type="checkbox" value="15:00" id="">
+                                <label for="">16:00</label>
+                                <input type="checkbox" value="16:00" id="">
+                                <label for="">17:00</label>
+                                <input type="checkbox" value="17:00" id="">
+                                <label for="">19:00</label>
+                                <input type="checkbox" value="19:00" id="">
+                                <label for="">20:00</label>
+                                <input type="checkbox" value="20:00" id="">
+                                <label for="">21:00</label>
+                                <input type="checkbox" value="21:00" id="">
+                            </div>  
+                </div>
+                <div>
+                        <label for="">Арена Стара Загора</label>
+                        <input type="checkbox" name="zaStaraZagora" id="">
+                        <div id="zaStaraZagora">
+                                <p>Часове на прожекцията:</p>
+                                <label for="">10:00</label>
+                                <input type="checkbox" value="10:00" id="">
+                                <label for="">11:00</label>
+                                <input type="checkbox" value="11:00" id="">
+                                <label for="">13:00</label>
+                                <input type="checkbox" value="13:00" id="">
+                                <label for="">14:00</label>
+                                <input type="checkbox" value="14:00" id="">
+                                <label for="">15:00</label>
+                                <input type="checkbox" value="15:00" id="">
+                                <label for="">16:00</label>
+                                <input type="checkbox" value="16:00" id="">
+                                <label for="">17:00</label>
+                                <input type="checkbox" value="17:00" id="">
+                                <label for="">19:00</label>
+                                <input type="checkbox" value="19:00" id="">
+                                <label for="">20:00</label>
+                                <input type="checkbox" value="20:00" id="">
+                                <label for="">21:00</label>
+                                <input type="checkbox" value="21:00" id="">
+                            </div>  
+                </div>
+               
+            </div>  
+            
+            <button>Syzdai</button>
+                
+        </fieldset>
+        
+    </form>
+    <script src="makeMovie.js"></script>
+</body>
+</html>
