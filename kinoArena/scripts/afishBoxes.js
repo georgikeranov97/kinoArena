@@ -3,17 +3,18 @@
 // });
 
 
-
+var moveBoxes2
+var removeBoxes2
 
 var izvikaiKutiite = function(){
 
-    $(".popup").click(function () {
-        var $this = $(this);
-        var $iframe = $("<iframe>").attr("src", $this.data("link")).css({"width": 400, "height": 300});
-        var $title = $("<h1>").text($this.data("title"));
-        $("#video-view").html($title).append($iframe);
-        $iframe.wrap("<div class='class-video'>");
-    });
+    // $(".popup").click(function () {
+    //     var $this = $(this);
+    //     var $iframe = $("<iframe>").attr("src", $this.data("link")).css({"width": 400, "height": 300});
+    //     var $title = $("<h1>").text($this.data("title"));
+    //     $("#video-view").html($title).append($iframe);
+    //     $iframe.wrap("<div class='class-video'>");
+    // });
 
     var forKidsDiv=document.getElementById('forKids')
     // var forKidsDiv2=document.getElementById('forKidsSmall')
@@ -172,7 +173,7 @@ var izvikaiKutiite = function(){
 
 
 
-
+}
     ////sega za malkiq, che se chupi, ako gi obedinq
 
     var trailerStop = 0;
@@ -182,7 +183,7 @@ var izvikaiKutiite = function(){
 
 
 
-     var moveBoxes2= function moveBoxes2(movie){
+     moveBoxes2= function moveBoxes2(movie){
     if(movie.imaLi===true){return}
     movie.imaLi=true;
     var trailer = movie.getElementsByClassName('trailer2')[0];
@@ -221,7 +222,7 @@ var izvikaiKutiite = function(){
     }      
     }
 
-    var removeBoxes2= function removeBoxes2(movie){
+    removeBoxes2= function removeBoxes2(movie){
 
         movie.daIzlizatLi=false;
         var trailer = movie.getElementsByClassName('trailer2')[0];
@@ -261,7 +262,7 @@ var izvikaiKutiite = function(){
     removeBoxes2(movie)
     },false))
 
-}
+
 
 
 

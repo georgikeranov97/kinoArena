@@ -17,6 +17,10 @@ function router() {
             case 'login' : userController();break;
             case 'cinemas' : cinemasController(); break;
             case 'program' : programController(); break;
+            case 'imax' : imaxController(); break;
+            case 'premium': premiumController(); break;
+            case 'luxe': luxeController(); break;
+            case 'vip': vipController();break;
     
     default: homeController();
     }

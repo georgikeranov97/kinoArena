@@ -28,19 +28,25 @@
     <!-- <link rel="stylesheet" href="assets/styles/style.css"> -->
 
 
-    <!-- <script src="../../node_modules/jquery/dist/jquery.js"></script> -->
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <!-- <script src="../../node_modules/jquery/dist/jquery.min.js"></script> -->
     <script src="../../node_modules/handlebars/dist/handlebars.min.js"></script>
     
     
     
     <script src="scripts/ticketStorage.js"></script>
     <script src="scripts/userStorage.js"></script>
-    <script src="scripts/cinemasStorage.js"></script>
-    <script src="scripts/movieStorage.js"></script>
     
+    <script src="scripts/cinemasStorage.js"></script>
+  
+    <script src="scripts/movieStorage.js"></script>
+    <script src="scripts/imax.js"></script>
+    <script src="scripts/imaxController.js"></script>
     <script src="scripts/buyTicketsController.js"></script>
     <script src="scripts/detailMovie.js"></script>
+    <script src="scripts/luxeController.js"></script>
+    <script src="scripts/premiumController.js"></script>
+    <script src="scripts/vipController.js"></script>
     <script src="scripts/detailController.js"></script>
     <script src="scripts/userController.js"></script>
     <script src="scripts/homeController.js"></script>
@@ -68,6 +74,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 0 99px;
+    color:white;
 }
 html {
     position: relative;
@@ -287,7 +294,7 @@ main{
             <nav id="left-nav">
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="#page=imax">
                             <div class="nav-elements">
                                 <img class="defaultImg" src="assets/images/imax.png" alt="imax">
                                 <img class='hoverImg' src="assets/images/imax-hover.png" alt="imax-hover">
@@ -295,7 +302,7 @@ main{
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#page=premium">
                             <div class="nav-elements">
                                 <img src="assets/images/premium.png" alt="premium" class="defaultImg">
                                 <img src="assets/images/premium-hover.png" alt="premium-hover" class="hoverImg">
@@ -303,7 +310,7 @@ main{
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#page=luxe">
                             <div class="nav-elements">
                                 <img src="assets/images/luxe.png" alt="luxe" class="defaultImg">
                                 <img src="assets/images/luxe-hover.png" alt="luxe-hover" class="hoverImg">
@@ -311,7 +318,7 @@ main{
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#page=vip">
                             <div class="nav-elements">
                                 <img src="assets/images/vip.png" alt="vip" class="defaultImg">
                                 <img src="assets/images/vip-hover.png" alt="vip-hover" class="hoverImg">

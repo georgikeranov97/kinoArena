@@ -1,0 +1,19 @@
+
+<body>
+        <div>
+            <h3>Филмите, които можете да гледате в залите ни IMAX:</h3>
+            <div id='filmiZaImax'></div>
+        </div>
+</body>
+<script>
+ var imaxDivche = document.getElementById('filmiZaImax')
+    
+    var imaxM= allMovies.filter(m => m.isImax === true);
+    imaxM.forEach(m=>{
+        const div = document.createElement('div')
+            div.innerHTML = m.showInDOMSmall()
+            console.log(imaxDivche)
+            imaxDivche.appendChild(div)
+    })
+</script>
+<script src="scripts/afishBoxes.js"></script>

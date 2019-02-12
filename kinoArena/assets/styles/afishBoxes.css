@@ -231,3 +231,15 @@ flex:1
     padding:0px;
     margin:0px;
 }
+
+#filmiZaImax {
+    color: white;
+    display:flex;
+
+}
+f#filmiZaImax i{
+    border: none;
+}
+
+
+
